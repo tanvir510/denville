@@ -1,0 +1,9 @@
+// Main Scss
+@import "variables";
+@import "normalize";
+@import "mixins";
+@import "global";
+
+// Inner scss
+@import "header";
+@import "banner";

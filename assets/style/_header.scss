@@ -1,0 +1,115 @@
+.header-nav {
+  background: $black;
+  .container {
+    max-width: 1406px;
+    .navbar {
+      padding: 0px;
+    }
+    .navbar-toggler {
+      background: none;
+      outline: none;
+      border: none;
+      padding: 0px;
+      font-size: 0px;
+      max-width: 25px;
+      &.login {
+        max-width: 35px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .site-logo {
+    @include tablet {
+      width: 200px;
+      max-width: 100%;
+      padding: 10px 0px;
+    }
+    @include mobile-sm {
+      width: 150px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        font-size: 18px;
+        color: #cccccc;
+        padding: 46px 16px;
+        @include laptop {
+          font-size: 16px;
+          padding: 33px 12px;
+        }
+        @include tablet {
+          font-size: 15px;
+          padding: 5px 0px;
+        }
+      }
+    }
+  }
+
+  .form-area {
+    input {
+      outline: none;
+      border: none;
+      box-shadow: none;
+      min-width: 170px;
+      border-radius: 8px;
+      height: 40px;
+      @include laptop {
+        min-width: 120px;
+        height: 35px;
+        font-size: 15px;
+      }
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+    .button-area {
+      min-width: 175px;
+      border-radius: 8px;
+      height: 40px;
+      background: $primary;
+      align-items: center;
+      justify-content: center;
+      @include laptop {
+        min-width: 45%;
+        height: 40px;
+      }
+
+      button {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        min-width: 80px;
+        border-radius: 6px;
+        height: 30px;
+        font-size: 16px;
+        @include laptop {
+          min-width: inherit;
+          font-size: 14px;
+          height: 32px;
+        }
+        &.login {
+          background: $black;
+          color: $white;
+          margin-right: 4px;
+        }
+        &.daftar {
+          background: $primary;
+          color: $white;
+        }
+        &:focus {
+          outline: none;
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

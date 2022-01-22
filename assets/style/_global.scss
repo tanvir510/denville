@@ -1,0 +1,58 @@
+body {
+  font-weight: 300;
+  font-family: $poppins;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+// Common section padding
+.section-padding {
+  padding: 100px 0px;
+}
+
+// Secondary Background Color
+.secondary-bg {
+  background: $secondary;
+}
+
+// Shop Background
+.bg-white {
+  background: $white;
+}
+.bg-gray {
+  background: $gray;
+}
+// White color
+.white {
+  color: $white;
+}
+
+// Black color
+.black {
+  color: $black;
+}
+
+// Gray color
+.gray {
+  color: $gray;
+}
+
+// Disable button
+button {
+  &:disabled {
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    cursor: not-allowed;
+    box-shadow: $shadow;
+  }
+}
+
+// Invalid feedback
+.invalid-feedback {
+  color: $white;
+  &.red {
+    color: #dc3545;
+  }
+}
