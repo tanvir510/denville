@@ -11,4 +11,13 @@
       el: ".banner-pagination",
     },
   });
+
+  /*****************************
+   * Navbar outside click
+   *****************************/
+  $(function () {
+    $(document).click(function (event) {
+      $(".navbar-collapse").collapse("hide");
+    });
+  });
 })(jQuery);

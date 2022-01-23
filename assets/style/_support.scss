@@ -51,16 +51,24 @@
     border: 1px solid $primary;
     border-top: none;
     background: $white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     table {
       width: 100%;
       tr {
         td {
           width: 33%;
           text-align: center;
-          padding: 15px 0px;
+          padding: 17px 0px;
           border-bottom: 1px solid #ccc;
           border-right: 1px solid #ccc;
+
           color: $black;
+          @include ipad {
+            padding: 12px 0px;
+            font-size: 15px;
+          }
           &:first-child {
             border-left: 1px solid #ccc;
           }

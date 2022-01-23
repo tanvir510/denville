@@ -99,6 +99,15 @@ body {
       width: 40px;
     }
   }
+
+  @include mobile-sm {
+    width: 90px;
+    height: 90px;
+    margin: 4px;
+    img {
+      width: 35px;
+    }
+  }
   .social-inner {
     span {
       display: block;
@@ -113,6 +122,11 @@ body {
         font-size: 15px;
         margin-bottom: 0px;
         line-height: 25px;
+      }
+      @include mobile-sm {
+        font-size: 13px;
+        margin-bottom: 0px;
+        line-height: 20px;
       }
       &.whatsapp {
         color: #3fc94f;
@@ -132,6 +146,10 @@ body {
         font-size: 12px;
         margin-bottom: 0px;
         line-height: 20px;
+      }
+      @include mobile-sm {
+        font-size: 11px;
+        line-height: 18px;
       }
     }
   }

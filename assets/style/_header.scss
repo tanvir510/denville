@@ -43,6 +43,29 @@
         font-size: 18px;
         color: #cccccc;
         padding: 46px 16px;
+        transition: $transition;
+        position: relative;
+
+        &:hover {
+          color: $primary;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 1px;
+            background: $primary;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 65%;
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+
+        &.active {
+          color: $primary;
+        }
         @include laptop {
           font-size: 14px;
           padding: 33px 12px;
@@ -66,6 +89,14 @@
         max-width: 120px;
         height: 35px;
         font-size: 15px;
+      }
+      @include tablet {
+        height: 40px;
+        max-width: 100%;
+      }
+
+      @include mobile-sm {
+        height: 35px;
       }
       &:focus {
         outline: none;
