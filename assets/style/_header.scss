@@ -22,6 +22,7 @@
   }
   .site-logo {
     text-align: center;
+    cursor: pointer;
     @include tablet {
       width: 200px;
       max-width: 100%;

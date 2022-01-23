@@ -5,8 +5,8 @@
    * Banner Swiper
    *****************************/
   const swiper = new Swiper(".banner-container", {
-    // autoplay: true,
-    // loop: true,
+    autoplay: true,
+    loop: true,
     pagination: {
       el: ".banner-pagination",
     },
@@ -40,5 +40,13 @@
           },
         }
       );
+  });
+
+  /*****************************
+   * Scroll Bottom to Top
+   *****************************/
+  $(".scrollToTop").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
   });
 })(jQuery);
