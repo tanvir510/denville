@@ -2,6 +2,18 @@
   "use strict";
 
   /*****************************
+   * Menu Scroll Top
+   *****************************/
+  var fixed_top = $("header");
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 80) {
+      fixed_top.addClass("menu-fixed animated fadeInDown");
+    } else {
+      fixed_top.removeClass("menu-fixed animated fadeInDown");
+    }
+  });
+
+  /*****************************
    * Banner Swiper
    *****************************/
   const swiper = new Swiper(".banner-container", {
@@ -49,4 +61,9 @@
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
   });
+
+  /*****************************
+   * Wow Js
+   *****************************/
+  new WOW().init();
 })(jQuery);
