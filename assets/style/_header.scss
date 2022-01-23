@@ -21,6 +21,7 @@
     }
   }
   .site-logo {
+    text-align: center;
     @include tablet {
       width: 200px;
       max-width: 100%;
@@ -30,7 +31,10 @@
       width: 150px;
     }
     img {
-      width: 100%;
+      width: 60%;
+      @include tablet {
+        width: 100%;
+      }
     }
   }
   .navbar-nav {
@@ -40,11 +44,10 @@
         color: #cccccc;
         padding: 46px 16px;
         @include laptop {
-          font-size: 16px;
+          font-size: 14px;
           padding: 33px 12px;
         }
         @include tablet {
-          font-size: 15px;
           padding: 5px 0px;
         }
       }
@@ -60,7 +63,7 @@
       border-radius: 8px;
       height: 40px;
       @include laptop {
-        min-width: 120px;
+        max-width: 120px;
         height: 35px;
         font-size: 15px;
       }
@@ -78,8 +81,8 @@
       align-items: center;
       justify-content: center;
       @include laptop {
-        min-width: 45%;
-        height: 40px;
+        min-width: 150px;
+        height: 35px;
       }
 
       button {
@@ -91,9 +94,9 @@
         height: 30px;
         font-size: 16px;
         @include laptop {
-          min-width: inherit;
-          font-size: 14px;
-          height: 32px;
+          min-width: 46%;
+          font-size: 13px;
+          height: 28px;
         }
         &.login {
           background: $black;

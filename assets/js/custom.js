@@ -5,7 +5,8 @@
    * Banner Swiper
    *****************************/
   const swiper = new Swiper(".banner-container", {
-    // If we need pagination
+    // autoplay: true,
+    // loop: true,
     pagination: {
       el: ".banner-pagination",
     },

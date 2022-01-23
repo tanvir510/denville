@@ -1,0 +1,41 @@
+.partner-area {
+  .partner-item {
+    margin-top: 50px;
+    border-radius: 8px 8px 0px 8px;
+    @include ipad {
+      margin-top: 30px;
+    }
+    .partner-thumb {
+      img {
+        width: 100%;
+      }
+    }
+    .partner-title {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 0px 0px 8px 8px;
+
+      @include ipad {
+        height: 80px;
+      }
+
+      h5 {
+        font-size: 35px;
+        margin: 0px;
+        font-weight: 700;
+        background: transparent linear-gradient(0deg, #ff9300 0%, #ffe282 54%, #fee07e 55%, #f3c751 71%, #ecb835 84%, #eab32b 91%) 0% 0%
+          no-repeat padding-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include ipad {
+          height: 35px;
+        }
+      }
+    }
+  }
+}

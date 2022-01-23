@@ -1,0 +1,188 @@
+.feature-area {
+  background: $primary;
+
+  .popular-part {
+    .bandar-q {
+      padding-right: 40px;
+      @include ipad {
+        padding: 0px 15px;
+
+        margin-bottom: 30px;
+        margin-top: 10px;
+      }
+      .bandar-inner {
+        padding: 30px 50px;
+        position: relative;
+        text-align: center;
+        border: 1px solid $black;
+        border-radius: 8px;
+
+        > img {
+          width: 100%;
+        }
+        @include ipad {
+          padding: 20px 40px;
+        }
+        h6 {
+          font-size: 60px;
+          font-weight: 400;
+          line-height: 50px;
+          color: $black;
+          margin-top: 15px;
+          @include ipad {
+            font-size: 30px;
+            margin-top: 10px;
+            line-height: 40px;
+            margin-bottom: 0px;
+          }
+        }
+        .ribbon {
+          width: 150px;
+          @include mobile-sm {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .contact-info {
+      text-align: center;
+      h4 {
+        font-size: 40px;
+        line-height: 60px;
+        position: relative;
+        margin-bottom: 50px;
+        color: $black;
+        font-weight: 700;
+
+        @include ipad {
+          font-size: 30px;
+          line-height: 40px;
+          margin-bottom: 20px;
+        }
+
+        @include mobile-lg {
+          font-size: 25px;
+          line-height: 30px;
+          margin-bottom: 15px;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 100px;
+          height: 2px;
+          background: $black;
+          bottom: -25px;
+          left: 50%;
+          transform: translateX(-50%);
+          @include ipad {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .download-app {
+      img {
+        width: 22px;
+        margin-right: 5px;
+        @include mobile-sm {
+          width: 18px;
+        }
+      }
+      color: $white;
+      text-align: center;
+      width: 570px;
+      max-width: 100%;
+      background: $black;
+      border-radius: 8px;
+      text-align: center;
+      margin: 0 auto;
+      height: 60px;
+      font-size: 24px;
+      line-height: 60px;
+      font-weight: 600;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mobile-sm {
+        font-size: 16px;
+        height: 40px;
+      }
+    }
+  }
+
+  .features-element {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include ipad {
+      margin-top: 30px;
+    }
+    .feature-item {
+      flex-basis: 20%;
+      border: 10px solid $primary;
+      @include macbook {
+        flex-basis: 25%;
+      }
+      @include tablet {
+        flex-basis: 33.33%;
+      }
+      @include ipad {
+        flex-basis: 50%;
+        border: 6px solid $primary;
+      }
+      .feature-inner {
+        padding: 15px 10px;
+        border: 1px solid $black;
+        border-radius: 8px;
+        position: relative;
+
+        .ribbon {
+          width: 60px;
+          top: -4%;
+          right: -4%;
+          @include ipad {
+            display: none;
+          }
+        }
+
+        @include ipad {
+          padding: 15px 5px;
+        }
+      }
+
+      .item-title {
+        font-size: 20px;
+        line-height: 30px;
+        color: $black;
+        font-weight: 500;
+        margin-top: 10px;
+
+        @include ipad {
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        @include mobile-sm {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      @include tablet {
+        width: 30%;
+      }
+
+      @include mobile-sm {
+        width: 44%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

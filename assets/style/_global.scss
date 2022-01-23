@@ -9,23 +9,168 @@ body {
 // Common section padding
 .section-padding {
   padding: 100px 0px;
+  @include ipad {
+    padding: 60px 0px;
+  }
+  @include mobile-sm {
+    padding: 40px 0px;
+  }
+}
+
+// Section heading
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  h3 {
+    font-size: 48px;
+    line-height: 60px;
+    color: $black;
+    font-weight: 400;
+    margin-bottom: 15px;
+    @include ipad {
+      margin-bottom: 0px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @include mobile-sm {
+      line-height: 40px;
+      font-size: 30px;
+    }
+  }
+
+  h2 {
+    font-size: 56px;
+    line-height: 60px;
+    color: $black;
+    font-weight: 700;
+    @include ipad {
+      line-height: 50px;
+      font-size: 45px;
+    }
+
+    @include mobile-sm {
+      line-height: 40px;
+      font-size: 35px;
+    }
+  }
+  @include ipad {
+    margin-bottom: 30px;
+  }
+  @include mobile-sm {
+    margin-bottom: 20px;
+  }
+}
+
+.col-half-offset {
+  margin-left: 4.166666667%;
+}
+
+// Ribbon style
+.ribbon {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  max-width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+// Cotact info
+.social-list {
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  background: $white;
+  max-width: 100%;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+
+  @include mobile-lg {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    img {
+      width: 40px;
+    }
+  }
+  .social-inner {
+    span {
+      display: block;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 40px;
+      margin-bottom: 5px;
+      @include mobile-lg {
+        font-size: 15px;
+        margin-bottom: 0px;
+        line-height: 25px;
+      }
+      &.whatsapp {
+        color: #3fc94f;
+      }
+      &.telegram {
+        color: #1d9fd5;
+      }
+      &.livechat {
+        color: #fd501e;
+      }
+    }
+    .number {
+      font-size: 16px;
+      font-weight: 400;
+      color: $black;
+      @include mobile-lg {
+        font-size: 12px;
+        margin-bottom: 0px;
+        line-height: 20px;
+      }
+    }
+  }
 }
 
 // Secondary Background Color
-.secondary-bg {
-  background: $secondary;
+.main-bg {
+  background: $primary;
 }
 
 // Shop Background
 .bg-white {
   background: $white;
 }
-.bg-gray {
-  background: $gray;
+.bg-lite {
+  background: $lite;
 }
 // White color
 .white {
   color: $white;
+}
+
+.paragraph {
+  font-size: 20px;
+  line-height: 36px;
+  color: $black;
+  font-weight: 400;
+  display: inline-flex;
+  text-align: center;
+
+  @include ipad {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  @include mobile-sm {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 
 // Black color
@@ -36,6 +181,13 @@ body {
 // Gray color
 .gray {
   color: $gray;
+}
+
+.curp-shape {
+  img {
+    width: 100%;
+    transform: translateY(-1px);
+  }
 }
 
 // Disable button

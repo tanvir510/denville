@@ -12,6 +12,13 @@
   }
 }
 
+//  laptop screens.
+@mixin macbook() {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 // Small screens, laptops.
 @mixin tablet() {
   @media only screen and (max-width: 991px) {
