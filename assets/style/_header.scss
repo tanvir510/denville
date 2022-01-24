@@ -60,22 +60,10 @@
         padding: 46px 16px;
         transition: $transition;
         position: relative;
+        text-transform: uppercase;
 
         &:hover {
           color: $primary;
-          // &::after {
-          //   position: absolute;
-          //   content: "";
-          //   width: 80%;
-          //   height: 1px;
-          //   background: $primary;
-          //   left: 50%;
-          //   transform: translateX(-50%);
-          //   top: 65%;
-          //   @include tablet {
-          //     display: none;
-          //   }
-          // }
         }
 
         &.active {
@@ -102,12 +90,20 @@
     }
 
     li {
+      &:last-child {
+        a {
+          border-bottom: none;
+        }
+      }
       a {
-        padding: 15px 10px;
+        padding: 12px 10px;
         border: none;
+        text-transform: uppercase;
+        border-bottom: 1px dashed #ccc;
         @include tablet {
           color: $black;
           padding: 10px;
+          border-bottom: 1px dashed $black;
         }
         &:hover {
           background: $primary;

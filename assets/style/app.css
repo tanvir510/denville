@@ -1088,6 +1088,7 @@ button:disabled {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   position: relative;
+  text-transform: uppercase;
 }
 
 .header-nav .navbar-nav > li a:hover {
@@ -1124,15 +1125,22 @@ button:disabled {
   }
 }
 
+.header-nav .dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
 .header-nav .dropdown-menu li a {
-  padding: 15px 10px;
+  padding: 12px 10px;
   border: none;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #ccc;
 }
 
 @media only screen and (max-width: 991px) {
   .header-nav .dropdown-menu li a {
     color: #000;
     padding: 10px;
+    border-bottom: 1px dashed #000;
   }
 }
 
