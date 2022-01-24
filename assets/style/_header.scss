@@ -1,8 +1,20 @@
 .header-nav {
-  background: $black;
-  .navbar-nav {
+  background: rgba($color: $black, $alpha: 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: $transition;
+  z-index: 999999;
+  &:hover {
+    background: $black;
     @include tablet {
-      padding-bottom: 40px;
+      background: rgba($color: $black, $alpha: 0.9);
+    }
+  }
+  @include tablet {
+    .navbar-collapse {
+      height: 100vh;
     }
   }
   &.menu-fixed {
@@ -10,7 +22,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 99999;
     -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   }
@@ -46,7 +58,7 @@
       width: 150px;
     }
     img {
-      width: 60%;
+      width: 50%;
       @include tablet {
         width: 100%;
       }
@@ -58,17 +70,35 @@
       &:focus-visible {
         outline: none;
       }
-      a {
+      > a {
         outline: none !important;
         font-size: 18px;
-        color: #cccccc;
+        color: $white;
         padding: 46px 16px;
         transition: $transition;
         position: relative;
         text-transform: uppercase;
-
+        font-weight: 400;
+        letter-spacing: 0.15em;
         &:hover {
-          color: $primary;
+          &::before {
+            width: 100%;
+            left: 0;
+          }
+        }
+        &::before {
+          bottom: 20px;
+          content: "";
+          display: block;
+          height: 1.5px;
+          left: 50%;
+          position: absolute;
+          background: $primary;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          width: 0;
+          @include tablet {
+            display: none;
+          }
         }
 
         &.active {
@@ -98,22 +128,49 @@
       &:last-child {
         a {
           border-bottom: none;
+          &:hover {
+            border-bottom: none;
+          }
         }
       }
+
       a {
         padding: 12px 10px;
         border: none;
         text-transform: uppercase;
         border-bottom: 1px dashed #ccc;
+        transition: $transition;
+        color: $white;
+
         @include tablet {
           color: $black;
-          padding: 10px;
+          padding: 8px 10px;
+          font-size: 14px;
           border-bottom: 1px dashed $black;
         }
         &:hover {
-          background: $primary;
-          color: $white;
+          background: transparent;
+          color: $primary;
+          border-bottom: 1px dashed $primary;
         }
+      }
+    }
+  }
+
+  .dropdown {
+    .dropdown-toggle {
+      &::after {
+        transition: $transition;
+        margin-left: -3px;
+        border-top: 0.4em solid;
+        border-right: 0.4em solid transparent;
+        border-bottom: 0;
+        border-left: 0.4em solid transparent;
+      }
+    }
+    &.open .dropdown-toggle {
+      &::after {
+        transform: rotate(-180deg);
       }
     }
   }
@@ -123,7 +180,7 @@
       outline: none;
       border: none;
       box-shadow: none;
-      min-width: 170px;
+      min-width: 140px;
       border-radius: 8px;
       height: 40px;
       @include laptop {
@@ -146,14 +203,14 @@
       }
     }
     .button-area {
-      min-width: 175px;
+      min-width: 150px;
       border-radius: 8px;
       height: 40px;
-      background: $primary;
+      background: linear-gradient(0, #ff9300 20%, #ffc06b 100%);
       align-items: center;
       justify-content: center;
       @include laptop {
-        min-width: 150px;
+        min-width: 135px;
         height: 35px;
       }
 
@@ -176,7 +233,7 @@
           margin-right: 4px;
         }
         &.daftar {
-          background: $primary;
+          background: transparent;
           color: $white;
         }
         &:focus {
@@ -187,4 +244,82 @@
       }
     }
   }
+  // Modal scss
+  .modal {
+    overflow-y: inherit;
+    overflow-x: inherit;
+  }
+
+  /* Model Button Box */
+  button.close {
+    color: black;
+    border: none;
+    background: none;
+  }
+  button.btn.btn-primary {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 5vw;
+    font-weight: 300;
+    background: none;
+    outline: none;
+    padding: 0 20px;
+  }
+  input.model-txt {
+    background: antiquewhite;
+    width: 100%;
+  }
+  button.btn.btn-primary.submit {
+    width: 100%;
+    background: $primary;
+    border-radius: 30px;
+    padding: 10px 0;
+    font-size: 6vw;
+    font-weight: 600;
+    border: none;
+  }
+  .mb-3-footer {
+    width: 100%;
+  }
+
+  .text-model-left {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-model-left h6 {
+    font-family: "Lato", sans-serif;
+    font-size: small;
+  }
+
+  button.btn.btn-primary.mb-3-btn {
+    margin-left: 5px;
+    padding: 10px 5px;
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 50rem;
+    font-size: small;
+    font-weight: 500;
+  }
+  button.btn.btn-primary.mb-3-btn:hover {
+    background: grey;
+  }
+  h5#exampleModalLabel {
+    text-shadow: none;
+  }
+  label.col-form-label {
+    text-shadow: none;
+  }
+
+  .text-model-left h6 {
+    padding-top: 6px;
+    line-height: 28px;
+    text-shadow: none;
+  }
+  button.btn.btn-primary.login-btn-model {
+    border: none;
+    color: white;
+  }
+  /* Model Button Box */
 }

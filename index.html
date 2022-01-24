@@ -36,15 +36,7 @@
               <img src="./assets/images/common/logo.png" alt="Site logo" />
             </div>
 
-            <button
-              class="navbar-toggler d-block d-lg-none login"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#sitelogincontent"
-              aria-controls="sitelogincontent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler d-block d-lg-none login" type="button" data-bs-toggle="modal" data-bs-target="#mobileMenuForm">
               <img src="./assets/images/common/user.png" alt="User Icon" />
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="sitenavcontent">
@@ -109,6 +101,43 @@
           </div>
         </nav>
       </div>
+      <!-- Mobile Menu login form start -->
+      <div class="modal fade" id="mobileMenuForm" tabindex="-1" aria-labelledby="mobileMenuFormLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mobileMenuFormLabel">Masuk</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Nama:</label>
+                  <input type="text" class="txt form-control model-txt" id="recipient-name" placeholder="Username" />
+                </div>
+                <div class="mb-3">
+                  <label for="kata-sandi" class="col-form-label">Kata Sandi:</label>
+                  <input type="text" class="txt form-control model-txt" id="recipient-name" placeholder="Silakan Masukkan Kata Sandi" />
+                </div>
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-primary submit">Masuk</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="mb-3-footer">
+                <div class="content-model">
+                  <div class="text-model-left">
+                    <h6>belum punya akun?</h6>
+                    <button type="submit" class="btn btn-primary mb-3-btn">DAFTAR DISINI</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu login form end -->
     </header>
     <!-- Header end here -->
 
