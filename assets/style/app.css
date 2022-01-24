@@ -1,5 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "OriginTech personal use";
+  src: url(../fonts/OriginTech.ttf);
+}
+
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -487,6 +492,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.social-list:hover {
+  -webkit-box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
+  box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
 }
 
 @media only screen and (max-width: 640px) {
@@ -955,6 +967,8 @@ button:disabled {
 
 .banner-wrapper .counter-number img {
   opacity: 0.8;
+  -webkit-animation: jackpot-flash 2s ease infinite;
+          animation: jackpot-flash 2s ease infinite;
 }
 
 .banner-wrapper .counter-number .counter-content {
@@ -966,10 +980,10 @@ button:disabled {
 }
 
 .banner-wrapper .counter-number .counter-content .number {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   color: #fff;
-  text-shadow: 1px 1px red;
+  text-shadow: 0 0 6px #ff00e0, 0 0 10px #ff00e0, 0 0 10px #fff;
 }
 
 @media only screen and (max-width: 480px) {
@@ -988,7 +1002,7 @@ button:disabled {
   font-size: 22px;
   font-weight: 600;
   color: #fff;
-  text-shadow: 1px 1px green;
+  text-shadow: 0 0 6px dodgerblue, 0 0 10px dodgerblue, 0 0 10px #fff;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1019,6 +1033,13 @@ button:disabled {
   line-height: 38px;
   color: #fff;
   margin-bottom: 30px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.banner-wrapper .daftar-btn:hover {
+  -webkit-box-shadow: 0px 5px 20px #fec72e;
+          box-shadow: 0px 5px 20px #fec72e;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1071,6 +1092,42 @@ button:disabled {
   }
 }
 
+@-webkit-keyframes jackpot-flash {
+  0% {
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
+    opacity: 0.65;
+  }
+  50% {
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
+    opacity: 0.9;
+  }
+  100% {
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
+    opacity: 0.65;
+  }
+}
+
+@keyframes jackpot-flash {
+  0% {
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
+    opacity: 0.65;
+  }
+  50% {
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
+    opacity: 0.9;
+  }
+  100% {
+    filter: contrast(1) brightness(1);
+    -webkit-filter: contrast(1) brightness(1);
+    opacity: 0.65;
+  }
+}
+
 .feature-area {
   background: #fec72e;
 }
@@ -1111,6 +1168,7 @@ button:disabled {
   line-height: 50px;
   color: #000;
   margin-top: 15px;
+  font-family: "OriginTech personal use";
 }
 
 @media only screen and (max-width: 768px) {
@@ -1295,23 +1353,24 @@ button:disabled {
 }
 
 .feature-area .features-element .feature-item .item-title {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
   color: #000;
   font-weight: 500;
   margin-top: 10px;
+  font-family: "OriginTech personal use";
 }
 
 @media only screen and (max-width: 768px) {
   .feature-area .features-element .feature-item .item-title {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .feature-area .features-element .feature-item .item-title {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
   }
 }

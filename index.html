@@ -101,33 +101,41 @@
     <!-- Banner start here -->
     <section class="banner-area">
       <!-- Slider main container -->
-      <div class="swiper banner-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="banner-wrapper">
-              <div class="container">
-                <div class="banner-content text-center wow fadeInUp">
+
+      <div class="banner-wrapper">
+        <div class="container">
+          <div class="banner-content text-center wow fadeInUp">
+            <div class="swiper banner-container">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
                   <div class="circle"><img src="./assets/images/banner/slide1.png" alt="Circle" /></div>
-
-                  <div class="counter-number">
-                    <img src="./assets/images/banner/shape.png" alt="Shape" />
-                    <div class="counter-content">
-                      <div class="number count">1399585728</div>
-                      <div class="text">PROGRESIF JACKPOT</div>
-                    </div>
-                  </div>
-
-                  <button class="daftar-btn">DAFTAR</button>
-                  <div class="note">Daftar sekarang dan dapatkan bonus menarik setiap minggu</div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                  <div class="circle"><img src="./assets/images/banner/slide2.png" alt="Circle" /></div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                  <div class="circle"><img src="./assets/images/banner/slide3.png" alt="Circle" /></div>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="counter-number">
+              <img src="./assets/images/banner/shape.png" alt="Shape" />
+              <div class="counter-content">
+                <div class="number" id="jp1" method="jackpot" param="Sakong" separator=".">1.737.171.991</div>
+                <div class="text">PROGRESIF JACKPOT</div>
+              </div>
+            </div>
 
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
+            <button class="daftar-btn">DAFTAR</button>
+            <div class="note">Daftar sekarang dan dapatkan bonus menarik setiap minggu</div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <!-- <div class="swiper-slide">
             <div class="banner-wrapper">
               <div class="container">
                 <div class="banner-content text-center wow fadeInUp">
@@ -136,7 +144,7 @@
                   <div class="counter-number">
                     <img src="./assets/images/banner/shape.png" alt="Shape" />
                     <div class="counter-content">
-                      <div class="number count">1399585728</div>
+                      <div class="number" id="jp1" method="jackpot" param="Sakong" separator=".">1399585728</div>
                       <div class="text">PROGRESIF JACKPOT</div>
                     </div>
                   </div>
@@ -146,10 +154,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <!-- Silde 3 -->
-          <div class="swiper-slide">
+        <!-- Silde 3 -->
+        <!-- <div class="swiper-slide">
             <div class="banner-wrapper">
               <div class="container">
                 <div class="banner-content text-center wow fadeInUp">
@@ -158,7 +166,7 @@
                   <div class="counter-number">
                     <img src="./assets/images/banner/shape.png" alt="Shape" />
                     <div class="counter-content">
-                      <div class="number count">1399585728</div>
+                      <div class="number" id="jp1" method="jackpot" param="Sakong" separator=".">1399585728</div>
                       <div class="text">PROGRESIF JACKPOT</div>
                     </div>
                   </div>
@@ -168,10 +176,7 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <!-- <div class="banner-pagination"></div> -->
+          </div> -->
       </div>
       <div class="curp-shape">
         <img src="./assets/images/banner/banner-shape.png" alt="Shape" />
@@ -203,7 +208,7 @@
               <div class="bandar-q mb-4 mb-mb-lg-1 wow fadeInUp">
                 <div class="bandar-inner">
                   <img src="./assets/images/feature/bandar q.png" alt="Bandar" />
-                  <h6 class="title">bandar q</h6>
+                  <h6 class="title">BandarQ</h6>
                   <div class="ribbon">
                     <img src="./assets/images/feature/populer.png" alt="Ribbon" />
                   </div>
@@ -619,5 +624,43 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- Custom Js -->
     <script type="text/javascript" src="./assets/js/custom.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var delay = 1000000;
+        var jackpot = 0;
+        pull_jackpot();
+        var timer;
+        function pull_jackpot() {
+          var nominal = 1737255388;
+          if (jackpot == 0) jackpot = parseInt(nominal - 100000);
+          var amount = (100000 / delay) * 1;
+          timer = setInterval(function () {
+            jackpot = set_jackpot(jackpot, nominal, amount);
+          }, 1);
+        }
+        function set_jackpot(jackpot, nominal, amount) {
+          var jackpot = jackpot + amount;
+          if (jackpot >= nominal) {
+            clearInterval(timer);
+            pull_jackpot();
+          } else {
+            var result = addCommas(parseInt(jackpot));
+            $("#jp1").html(result);
+          }
+          return jackpot;
+        }
+        function addCommas(nStr) {
+          nStr += "";
+          x = nStr.split(".");
+          x1 = x[0];
+          x2 = x.length > 1 ? "." + x[1] : "";
+          var rgx = /(\d+)(\d{3})/;
+          while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, "$1" + "." + "$2");
+          }
+          return x1 + x2;
+        }
+      });
+    </script>
   </body>
 </html>
