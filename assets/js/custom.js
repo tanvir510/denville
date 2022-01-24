@@ -28,11 +28,11 @@
   /*****************************
    * Navbar outside click
    *****************************/
-  $(function () {
-    $(document).click(function (event) {
-      $(".navbar-collapse").collapse("hide");
-    });
-  });
+  // $(function () {
+  //   $(document).click(function (event) {
+  //     $(".navbar-collapse").collapse("hide");
+  //   });
+  // });
 
   /*****************************
    * Scroll Bottom to Top
