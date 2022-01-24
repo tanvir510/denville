@@ -11,7 +11,7 @@
       }
     }
     .partner-title {
-      height: 100px;
+      height: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,7 +20,7 @@
       border-radius: 0px 0px 8px 8px;
 
       @include ipad {
-        height: 80px;
+        height: 60px;
       }
 
       h5 {

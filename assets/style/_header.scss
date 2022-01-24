@@ -54,7 +54,12 @@
   }
   .navbar-nav {
     > li {
+      outline: none !important;
+      &:focus-visible {
+        outline: none;
+      }
       a {
+        outline: none !important;
         font-size: 18px;
         color: #cccccc;
         padding: 46px 16px;
