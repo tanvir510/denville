@@ -44,10 +44,6 @@
           -webkit-box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
           box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
         }
-
-        @include ipad {
-          height: 35px;
-        }
       }
     }
   }

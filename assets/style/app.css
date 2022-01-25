@@ -583,6 +583,11 @@ body {
   background: #fec72e;
 }
 
+::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
 .bg-white {
   background: #fff;
 }
@@ -1730,16 +1735,18 @@ body.modal-open {
   background-size: cover;
 }
 
-.banner-area .curp-shape img {
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+.banner-area .curp-shape {
+  position: relative;
 }
 
-@media only screen and (max-width: 768px) {
-  .banner-area .curp-shape img {
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
-  }
+.banner-area .curp-shape::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 100%;
+  bottom: -3px;
+  background: #fec72e;
+  left: 0;
 }
 
 .banner-wrapper {
@@ -2219,32 +2226,12 @@ body.modal-open {
 
 .support-area .paragraph {
   position: relative;
-  margin-bottom: 70px;
-}
-
-.support-area .paragraph::after, .support-area .paragraph::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 1px;
-  bottom: -30px;
-  background: #000;
-}
-
-.support-area .paragraph::after {
-  bottom: -37px;
-  width: 90%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 768px) {
   .support-area .paragraph {
     margin-bottom: 15px;
-  }
-  .support-area .paragraph::after, .support-area .paragraph::before {
-    display: none;
   }
 }
 
@@ -2378,12 +2365,6 @@ body.modal-open {
   background: #fdc04a;
   -webkit-box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
   box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
-}
-
-@media only screen and (max-width: 768px) {
-  .partner-area .partner-item .partner-title h5 {
-    height: 35px;
-  }
 }
 
 footer {
