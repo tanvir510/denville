@@ -107,6 +107,10 @@
       justify-content: center;
       transition: $transition;
       cursor: pointer;
+
+      @include ipad {
+        margin-top: 5px;
+      }
       &:hover {
         background: #fdc04a;
         -webkit-box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;

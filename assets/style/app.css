@@ -1735,6 +1735,13 @@ body.modal-open {
           transform: translateY(3px);
 }
 
+@media only screen and (max-width: 768px) {
+  .banner-area .curp-shape img {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+}
+
 .banner-wrapper {
   padding: 150px 0px 100px;
 }
@@ -2077,6 +2084,12 @@ body.modal-open {
 @media only screen and (max-width: 480px) {
   .feature-area .popular-part .download-app img {
     width: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .feature-area .popular-part .download-app {
+    margin-top: 5px;
   }
 }
 

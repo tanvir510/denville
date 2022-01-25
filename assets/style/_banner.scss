@@ -12,6 +12,9 @@
   .curp-shape {
     img {
       transform: translateY(3px);
+      @include ipad {
+        transform: translateY(1px);
+      }
     }
   }
 }
