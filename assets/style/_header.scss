@@ -43,7 +43,7 @@
       border: none;
       padding: 0px;
       font-size: 0px;
-      max-width: 25px;
+      max-width: 30px;
       outline: none;
       border: none;
       box-shadow: none;
@@ -55,9 +55,13 @@
       &.login {
         max-width: 35px;
         transform: translateY(-5px);
+
+        img {
+          width: 100%;
+        }
       }
       img {
-        width: 100%;
+        width: 90%;
       }
     }
   }
@@ -93,6 +97,21 @@
   .navbar-nav {
     > li {
       outline: none !important;
+      padding: 46px 12px;
+      @include desktop {
+        padding: 33px 9px;
+        font-size: 15px;
+      }
+      @include laptop {
+        font-size: 14px;
+      }
+      @include macbook {
+        padding: 33px 8px;
+        font-size: 13px;
+      }
+      @include tablet {
+        padding: 5px 0px;
+      }
       &:focus-visible {
         outline: none;
       }
@@ -105,21 +124,19 @@
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 0.15em;
+        &.active {
+          color: $primary;
+        }
         &.nav-link {
-          padding: 46px 12px;
+          padding: 0px;
           @include desktop {
-            padding: 33px 9px;
             font-size: 15px;
           }
           @include laptop {
             font-size: 14px;
           }
           @include macbook {
-            padding: 33px 8px;
             font-size: 13px;
-          }
-          @include tablet {
-            padding: 5px 0px;
           }
         }
         &:hover {
@@ -129,7 +146,7 @@
           }
         }
         &::before {
-          bottom: 27px;
+          bottom: 0px;
           content: "";
           display: block;
           height: 2px;
@@ -157,11 +174,17 @@
     min-width: 200px;
     background: $black;
     top: 85px;
+    text-align: center;
     @include tablet {
       background: $primary;
     }
 
     li {
+      padding: 8px 15px;
+      display: inline-block;
+      @include tablet {
+        padding: 5px 10px;
+      }
       &:last-child {
         a {
           border-bottom: none;
@@ -172,12 +195,13 @@
       }
 
       a {
-        padding: 8px 15px;
         border: none;
         text-transform: uppercase;
         transition: all 0.9s ease-in-out;
         color: $white;
         font-size: 15px;
+        padding: 0px;
+        display: inline-block;
 
         &::before {
           bottom: 0px;
@@ -185,12 +209,15 @@
 
         @include tablet {
           color: $black;
-          padding: 8px 10px;
           font-size: 14px;
         }
         &:hover {
           background: transparent;
           color: $primary;
+
+          @include tablet {
+            color: $black;
+          }
 
           &::before {
             bottom: 0px;

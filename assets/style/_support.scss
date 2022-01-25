@@ -1,9 +1,29 @@
 .support-area {
   .paragraph {
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 70px;
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: -30px;
+      background: $black;
+    }
+
+    &::after {
+      bottom: -37px;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     @include ipad {
       margin-bottom: 15px;
+      &::after,
+      &::before {
+        display: none;
+      }
     }
   }
 
