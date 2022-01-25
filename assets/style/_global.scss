@@ -171,6 +171,9 @@ body {
 .bg-lite {
   background: $lite;
 }
+.bg-black {
+  background: $black;
+}
 // White color
 .white {
   color: $white;
@@ -374,6 +377,34 @@ button {
   }
 }
 
+// Close Icon
+.close-icon {
+  position: absolute;
+  right: 32px;
+  top: 25px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close-icon:hover {
+  opacity: 1;
+}
+.close-icon:before,
+.close-icon:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 24px;
+  width: 2px;
+  background-color: $white;
+}
+.close-icon:before {
+  transform: rotate(45deg);
+}
+.close-icon:after {
+  transform: rotate(-45deg);
+}
+
 // Article style
 
 .article-text-wrapper {
@@ -402,4 +433,13 @@ button {
       width: 100%;
     }
   }
+}
+
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+}
+
+.modal-backdrop {
+  background-color: transparent !important;
 }

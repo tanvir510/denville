@@ -29,27 +29,22 @@
    * Navbar outside click
    *****************************/
   $(document).click(function (event) {
-    /// If *navbar-collapse* is not among targets of event
     if (!$(event.target).is(".navbar-collapse *")) {
       $(".navbar-collapse").collapse("hide");
     }
   });
 
   $(function () {
-    var $window = $(window);
-    var windowsize = $window.width();
-    if (windowsize > 991) {
-      $(".dropdown").hover(
-        function () {
-          $(".dropdown").addClass("open");
-          $(".dropdown-menu").addClass("show");
-        },
-        function () {
-          $(".dropdown").removeClass("open");
-          $(".dropdown-menu").removeClass("show");
-        }
-      );
-    }
+    $(".desktop-nav").hover(
+      function () {
+        $(".desktop-nav").addClass("open");
+        $(".desktop-nav-menu").addClass("show");
+      },
+      function () {
+        $(".desktop-nav").removeClass("open");
+        $(".desktop-nav-menu").removeClass("show");
+      }
+    );
   });
 
   /*****************************
