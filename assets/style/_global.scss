@@ -9,22 +9,22 @@ body {
 
 // Common section padding
 .section-padding {
-  padding: 40px 0px;
+  padding: 30px 0px;
   @include mobile-sm {
-    padding: 20px 0px;
+    padding: 15px 0px;
   }
 }
 
 // Section heading
 .section-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   h3 {
     font-size: 48px;
     line-height: 60px;
     color: $black;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     @include ipad {
       margin-bottom: 0px;
       font-size: 40px;
@@ -53,10 +53,10 @@ body {
     }
   }
   @include ipad {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   @include mobile-sm {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -195,6 +195,7 @@ body {
   @include mobile-sm {
     font-size: 14px;
     line-height: 25px;
+    text-align: justify;
   }
 }
 
@@ -284,8 +285,19 @@ button {
   position: relative;
   margin: 0px;
 
+  &.section-padding {
+    padding: 160px 0px 100px;
+    @include laptop {
+      padding: 120px 0px 100px;
+    }
+
+    @include ipad {
+      padding: 100px 0px 70px;
+    }
+  }
+
   h1 {
-    font-size: 90px;
+    font-size: 100px;
     color: $white;
     line-height: 80px;
     font-weight: 600;
@@ -293,13 +305,18 @@ button {
     margin-bottom: 20px;
 
     @include ipad {
-      font-size: 70px;
+      font-size: 80px;
       line-height: 80px;
     }
 
-    @include mobile-sm {
+    @include mobile-lg {
       font-size: 50px;
       line-height: 50px;
+    }
+
+    @include mobile-sm {
+      font-size: 40px;
+      line-height: 40px;
     }
 
     @include mobile {
@@ -438,6 +455,19 @@ button {
 body.modal-open {
   overflow: hidden;
   position: fixed;
+}
+
+.modal {
+  .btn-close {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
 }
 
 .modal-backdrop {

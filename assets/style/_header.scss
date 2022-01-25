@@ -13,6 +13,9 @@
     }
   }
   @include tablet {
+    height: 70px;
+    display: flex;
+    align-items: center;
     .navbar-collapse {
       height: 100vh;
     }
@@ -27,7 +30,10 @@
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
   }
   .container {
-    max-width: 1406px;
+    max-width: 95%;
+    @include tablet {
+      max-width: inherit;
+    }
     .navbar {
       padding: 0px;
     }
@@ -38,8 +44,17 @@
       padding: 0px;
       font-size: 0px;
       max-width: 25px;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
       &.login {
         max-width: 35px;
+        transform: translateY(-5px);
       }
       img {
         width: 100%;
@@ -49,27 +64,29 @@
   .site-logo {
     text-align: center;
     cursor: pointer;
+    max-width: 250px;
+    width: 100%;
+    @include laptop {
+      max-width: 200px;
+    }
     @include tablet {
-      width: 200px;
-      max-width: 100%;
-      padding: 15px 0px;
-    }
-    @include ipad {
-      width: 175px;
-    }
-    @include mobile-sm {
-      width: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     img {
-      width: 75%;
-      @include laptop {
-        width: 55%;
-      }
-      @include macbook {
-        width: 85%;
-      }
-      @include tablet {
-        width: 100%;
+      width: 100%;
+    }
+  }
+  .navbar-toggler {
+    span {
+      color: $white;
+      font-size: 10px;
+      &.menu-text {
+        margin-top: 8px;
+        font-size: 10px;
+        display: block;
       }
     }
   }
@@ -83,12 +100,28 @@
         outline: none !important;
         font-size: 18px;
         color: $white;
-        padding: 46px 25px;
-        transition: $transition;
+        transition: all 0.9s ease-in-out;
         position: relative;
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 0.15em;
+        &.nav-link {
+          padding: 46px 12px;
+          @include desktop {
+            padding: 33px 9px;
+            font-size: 15px;
+          }
+          @include laptop {
+            font-size: 14px;
+          }
+          @include macbook {
+            padding: 33px 8px;
+            font-size: 13px;
+          }
+          @include tablet {
+            padding: 5px 0px;
+          }
+        }
         &:hover {
           &::before {
             width: 100%;
@@ -96,7 +129,7 @@
           }
         }
         &::before {
-          bottom: 20px;
+          bottom: 27px;
           content: "";
           display: block;
           height: 2px;
@@ -115,10 +148,6 @@
         }
         @include laptop {
           font-size: 14px;
-          padding: 33px 20px;
-        }
-        @include tablet {
-          padding: 5px 0px;
         }
       }
     }
@@ -146,9 +175,13 @@
         padding: 8px 15px;
         border: none;
         text-transform: uppercase;
-        transition: $transition;
+        transition: all 0.9s ease-in-out;
         color: $white;
         font-size: 15px;
+
+        &::before {
+          bottom: 0px;
+        }
 
         @include tablet {
           color: $black;
@@ -190,13 +223,19 @@
       outline: none;
       border: none;
       box-shadow: none;
-      min-width: 140px;
+      max-width: 140px;
+      min-width: 100px;
       border-radius: 8px;
       height: 40px;
       @include laptop {
         max-width: 120px;
+        min-width: 100px;
         height: 35px;
-        font-size: 15px;
+        font-size: 14px;
+      }
+      @include macbook {
+        max-width: 100px;
+        min-width: 80px;
       }
       @include tablet {
         height: 40px;
@@ -221,7 +260,7 @@
       justify-content: center;
       transition: $transition;
       @include laptop {
-        min-width: 135px;
+        max-width: 160px;
         height: 35px;
       }
 
@@ -230,10 +269,18 @@
           &.login {
             background: transparent;
             color: $white;
+            &:hover {
+              background: black;
+              color: $white;
+            }
           }
           &.daftar {
-            background: black;
+            background: transparent;
             color: $white;
+            &:hover {
+              background: black;
+              color: $white;
+            }
           }
         }
       }
@@ -242,14 +289,13 @@
         outline: none;
         border: none;
         box-shadow: none;
-        min-width: 80px;
+        min-width: 46%;
         border-radius: 6px;
         height: 30px;
         font-size: 16px;
         transition: $transition;
 
         @include laptop {
-          min-width: 46%;
           font-size: 13px;
           height: 28px;
         }
@@ -346,6 +392,18 @@
     button.btn.btn-primary.login-btn-model {
       border: none;
       color: white;
+    }
+  }
+
+  .modal-header {
+    position: relative;
+    height: 70px;
+    .site-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
     }
   }
 

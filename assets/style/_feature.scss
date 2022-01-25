@@ -101,7 +101,7 @@
       font-size: 24px;
       line-height: 60px;
       font-weight: 600;
-      margin-top: 15px;
+      margin-top: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -121,12 +121,12 @@
   }
 
   .features-element {
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     @include ipad {
-      margin-top: 30px;
+      margin-top: 20px;
     }
     .feature-item {
       flex-basis: 20%;

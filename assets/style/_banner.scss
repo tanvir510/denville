@@ -11,7 +11,7 @@
 
   .curp-shape {
     img {
-      transform: translateY(1px);
+      transform: translateY(3px);
     }
   }
 }
@@ -96,7 +96,6 @@
     -webkit-box-shadow: 0 0 11px #ffe13e, 0 0 10px #2d2809, 0 0 11px #ffe13e inset;
     box-shadow: 0 0 11px #ffe13e, 0 0 10px #2d2809, 0 0 11px #ffe13e inset;
     -webkit-transition: 0.25s ease;
-    transition: 0.25s ease;
     color: #fff;
     position: relative;
     z-index: 0;
