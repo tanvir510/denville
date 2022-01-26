@@ -113,6 +113,14 @@ body {
     }
   }
   .social-inner {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    display: block;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
     span {
       display: block;
     }

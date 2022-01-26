@@ -519,6 +519,18 @@ body {
   }
 }
 
+.social-list .social-inner {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  display: block;
+}
+
+.social-list .social-inner:focus-visible {
+  outline: none;
+  border: none;
+}
+
 .social-list .social-inner span {
   display: block;
 }
@@ -2056,7 +2068,6 @@ body.modal-open {
 }
 
 .feature-area .popular-part .download-app {
-  color: #fff;
   text-align: center;
   width: 570px;
   max-width: 100%;
@@ -2081,6 +2092,20 @@ body.modal-open {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
   cursor: pointer;
+}
+
+.feature-area .popular-part .download-app a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  display: block;
+  width: 100%;
+}
+
+.feature-area .popular-part .download-app a:focus-visible {
+  outline: none;
+  border: none;
 }
 
 .feature-area .popular-part .download-app img {
@@ -2329,6 +2354,7 @@ body.modal-open {
   -webkit-box-shadow: 0px 3px 6px #00000029;
           box-shadow: 0px 3px 6px #00000029;
   border-radius: 0px 0px 8px 8px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {

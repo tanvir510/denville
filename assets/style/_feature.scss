@@ -82,6 +82,18 @@
     }
 
     .download-app {
+      a {
+        text-decoration: none;
+        outline: none;
+        border: none;
+        color: $white;
+        display: block;
+        width: 100%;
+        &:focus-visible {
+          outline: none;
+          border: none;
+        }
+      }
       img {
         width: 22px;
         margin-right: 5px;
@@ -89,7 +101,6 @@
           width: 18px;
         }
       }
-      color: $white;
       text-align: center;
       width: 570px;
       max-width: 100%;

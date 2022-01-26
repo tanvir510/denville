@@ -278,27 +278,31 @@
 
                 <div class="social-app d-flex justify-content-center">
                   <div class="social-list">
-                    <div class="social-inner">
+                    <a href="https://wa.me/85595306918 " target="_blank" class="social-inner">
                       <img src="./assets/images/feature/whatsapp.png" alt="Social App" />
                       <span class="name whatsapp">Whatsapp</span>
                       <span class="number">+85595306918</span>
-                    </div>
+                    </a>
                   </div>
                   <div class="social-list">
-                    <div class="social-inner">
+                    <a href="https://t.me/Asikqiu" target="_blank" class="social-inner">
                       <img src="./assets/images/feature/telegram.png" alt="Social App" />
                       <span class="name telegram">Telegram</span>
                       <span class="number">@Asikqui</span>
-                    </div>
+                    </a>
                   </div>
                   <div class="social-list">
-                    <div class="social-inner">
+                    <a href="https://secure.livechatinc.com/licence/6007151/v2/open_chat.cgi" target="_blank" class="social-inner">
                       <img src="./assets/images/feature/livechat.png" alt="Social App" />
                       <span class="name livechat">LiveChat</span>
-                    </div>
+                    </a>
                   </div>
                 </div>
-                <div class="download-app"><img src="./assets/images/feature/android.png" alt="Android" /> Download app for Android</div>
+                <div class="download-app">
+                  <a href="https://github.com/playcdn/playcdn.github.io/releases/download/v1.0/pkvgames.apk">
+                    <img src="./assets/images/feature/android.png" alt="Android" /> Download app for Android
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -523,7 +527,7 @@
               <div class="partner-thumb">
                 <img src="./assets/images/partner/partner-1.png" alt="Partner" />
               </div>
-              <div class="partner-title"><h5>DAFTAR DISINI</h5></div>
+              <div class="partner-title" onclick="window.open('https://180.215.14.113/')"><h5>DAFTAR DISINI</h5></div>
             </div>
           </div>
           <div class="col-md-6">
@@ -531,7 +535,7 @@
               <div class="partner-thumb">
                 <img src="./assets/images/partner/partner-2.png" alt="Partner" />
               </div>
-              <div class="partner-title"><h5>DAFTAR DISINI</h5></div>
+              <div class="partner-title" onclick="window.open('https://180.215.14.117/')"><h5>DAFTAR DISINI</h5></div>
             </div>
           </div>
         </div>
@@ -635,24 +639,24 @@
             <div class="widget-content">
               <div class="social-app d-flex">
                 <div class="social-list">
-                  <div class="social-inner">
+                  <a href="https://wa.me/85595306918 " target="_blank" class="social-inner">
                     <img src="./assets/images/feature/whatsapp.png" alt="Social App" />
                     <span class="name whatsapp">Whatsapp</span>
                     <span class="number">+85595306918</span>
-                  </div>
+                  </a>
                 </div>
                 <div class="social-list">
-                  <div class="social-inner">
+                  <a href="https://t.me/Asikqiu" target="_blank" class="social-inner">
                     <img src="./assets/images/feature/telegram.png" alt="Social App" />
                     <span class="name telegram">Telegram</span>
                     <span class="number">@Asikqui</span>
-                  </div>
+                  </a>
                 </div>
                 <div class="social-list">
-                  <div class="social-inner">
+                  <a href="https://secure.livechatinc.com/licence/6007151/v2/open_chat.cgi" target="_blank" class="social-inner">
                     <img src="./assets/images/feature/livechat.png" alt="Social App" />
                     <span class="name livechat">LiveChat</span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -696,6 +700,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- Custom Js -->
     <script type="text/javascript" src="./assets/js/custom.js"></script>
+    <!-- Counter Ready JS -->
     <script type="text/javascript">
       $(document).ready(function () {
         var delay = 1000000;
@@ -733,6 +738,19 @@
           return x1 + x2;
         }
       });
+    </script>
+    <!-- License Script -->
+    <script type="text/javascript">
+      var lc = {};
+      lc.license = 6007151;
+      (function () {
+        var lc = document.createElement("script");
+        lc.type = "text/javascript";
+        lc.async = true;
+        lc.src = ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.livechatinc.com/tracking.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(lc, s);
+      })();
     </script>
   </body>
 </html>
