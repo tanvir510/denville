@@ -139,7 +139,6 @@
     margin-top: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     @include ipad {
       margin-top: 20px;
     }
@@ -192,6 +191,10 @@
         @include mobile-sm {
           font-size: 15px;
           line-height: 20px;
+        }
+
+        @include mobile {
+          font-size: 13px;
         }
       }
 
