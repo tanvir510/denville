@@ -1770,7 +1770,7 @@ body.modal-open {
 @media only screen and (max-width: 480px) {
   .banner-area .headline-scroll {
     width: 80%;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
