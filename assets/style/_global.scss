@@ -249,6 +249,10 @@ button {
 // Scroll Top
 .scroll-top {
   position: relative;
+  display: none;
+  // @include ipad {
+  //   display: block;
+  // }
 }
 
 .scrollToTop {
