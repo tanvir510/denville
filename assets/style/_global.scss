@@ -362,6 +362,7 @@ button {
     margin-bottom: 30px;
     transition: $transition;
     margin-top: 20px;
+    cursor: pointer;
 
     &:hover {
       background: #fdc04a;
@@ -483,4 +484,9 @@ body.modal-open {
 
 .modal-backdrop {
   background-color: transparent !important;
+}
+
+#chat-widget-container {
+  z-index: 0;
+  position: relative;
 }
