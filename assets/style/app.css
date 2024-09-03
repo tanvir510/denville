@@ -1091,6 +1091,11 @@ body.modal-open {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   font-family: "Open Sans", sans-serif;
 }
+@media only screen and (max-width: 768px) {
+  .banner-area .booking-form {
+    max-width: 330px;
+  }
+}
 .banner-area .booking-form .btn {
   display: block;
   width: 100%;
@@ -1560,6 +1565,12 @@ body.modal-open {
   padding: 10px 30px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 11px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.reason .reason-feature .accordion-item .accordion-button img {
+  width: 25px;
 }
 .reason .reason-feature .accordion-item .accordion-button.collapsed {
   background-color: #f2f2f2;

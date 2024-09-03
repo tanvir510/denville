@@ -75,6 +75,10 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     font-family: $secondaryFont;
 
+    @include ipad {
+      max-width: 330px;
+    }
+
     .btn {
       display: block;
       width: 100%;
