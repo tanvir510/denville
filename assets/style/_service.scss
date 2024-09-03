@@ -70,6 +70,12 @@
       }
       &:hover {
         background-color: #f8f7f5;
+
+        .content {
+          h5 {
+            color: $primary;
+          }
+        }
       }
       .thumb {
         width: 40px;
@@ -91,6 +97,7 @@
           font-family: $primaryFont;
           margin-bottom: 10px;
           width: 100%;
+          transition: all ease-in-out 0.5s;
           @include tablet {
             max-width: 100%;
             font-size: 20px;

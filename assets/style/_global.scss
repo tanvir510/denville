@@ -94,9 +94,13 @@ body {
   text-decoration: none;
   gap: 10px;
   transition: all ease-in-out 0.5s;
+  border: 1px solid transparent;
 
   &:hover {
     color: $white;
+    // background-color: $white;
+    // border: 1px solid $primary;
+    // color: $primary;
   }
 
   @include ipad {

@@ -452,6 +452,7 @@ body {
   text-decoration: none;
   gap: 10px;
   transition: all ease-in-out 0.5s;
+  border: 1px solid transparent;
 }
 .primary-btn:hover {
   color: #fff;
@@ -1337,6 +1338,13 @@ body.modal-open {
   padding: 20px;
   border-radius: 20px;
   margin-bottom: 25px;
+  transition: all ease-in-out 0.5s;
+}
+.feature .feature-support .row .support-item:hover {
+  background-color: #f8f7f5;
+}
+.feature .feature-support .row .support-item:hover .content h6 {
+  color: #f26126;
 }
 @media only screen and (max-width: 768px) {
   .feature .feature-support .row .support-item {
@@ -1365,6 +1373,7 @@ body.modal-open {
   font-family: "Oswald", sans-serif;
   margin-bottom: 5px;
   width: 100%;
+  transition: all ease-in-out 0.5s;
 }
 @media only screen and (max-width: 991px) {
   .feature .feature-support .row .support-item .content h6 {
@@ -1449,6 +1458,9 @@ body.modal-open {
 .service .service-feature .service-item:hover {
   background-color: #f8f7f5;
 }
+.service .service-feature .service-item:hover .content h5 {
+  color: #f26126;
+}
 .service .service-feature .service-item .thumb {
   width: 40px;
   height: 40px;
@@ -1467,6 +1479,7 @@ body.modal-open {
   font-family: "Oswald", sans-serif;
   margin-bottom: 10px;
   width: 100%;
+  transition: all ease-in-out 0.5s;
 }
 @media only screen and (max-width: 991px) {
   .service .service-feature .service-item .content h5 {

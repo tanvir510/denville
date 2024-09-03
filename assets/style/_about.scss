@@ -170,6 +170,17 @@
         padding: 20px;
         border-radius: 20px;
         margin-bottom: 25px;
+        transition: all ease-in-out 0.5s;
+
+        &:hover {
+          background-color: #f8f7f5;
+
+          .content {
+            h6 {
+              color: $primary;
+            }
+          }
+        }
 
         @include ipad {
           margin-bottom: 15px;
@@ -196,6 +207,7 @@
             font-family: $primaryFont;
             margin-bottom: 5px;
             width: 100%;
+            transition: all ease-in-out 0.5s;
             @include tablet {
               max-width: 100%;
               font-size: 18px;
