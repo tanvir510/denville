@@ -5,698 +5,877 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Swiper css -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Boostrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
     <!-- Animate css -->
     <link rel="stylesheet" href="./assets/style/animate.css" />
     <!-- Main styles -->
     <link rel="stylesheet" href="./assets/style/app.css" />
-    <title>Asik QQ</title>
+    <title>Local Magic</title>
   </head>
   <body>
-    <!-- Header start here -->
-    <header class="header-nav">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#mobileMenuNav">
-              <img src="./assets/images/common/menu.png" alt="Menu Icon" /> <span class="menu-text"> Menu</span>
-            </button>
-
-            <div class="site-logo d-lg-none text-center">
-              <a href="/"><img src="./assets/images/common/logo.png" alt="Site logo" /></a>
-            </div>
-
-            <button class="navbar-toggler d-block d-lg-none login" type="button" data-bs-toggle="modal" data-bs-target="#mobileMenuForm">
-              <img src="./assets/images/common/user.png" alt="User Icon" /> <span> Masuk</span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="sitenavcontent">
-              <!-- Menu list -->
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="javascript:void()">DAFTAR</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/promo.html">Promo</a>
-                </li>
-                <li class="nav-item dropdown desktop-nav">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Panduan
-                  </a>
-                  <ul class="dropdown-menu desktop-nav-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/bermain.html">CARA BERMAIN </a></li>
-                    <li><a class="dropdown-item" href="/daftar.html">PANDUAN DAFTAR </a></li>
-                    <li><a class="dropdown-item" href="/keamanan.html">KEAMANAN</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/peraturan.html">Peraturan</a>
-                </li>
-              </ul>
-
-              <!-- Site logo -->
-              <div class="site-logo d-none d-lg-block">
-                <a href="/"><img src="./assets/images/common/logo.png" alt="Site logo" /></a>
-              </div>
-
-              <!-- Input form -->
-              <form class="form-area d-none d-lg-flex">
-                <input class="form-control me-2" type="text" placeholder="Username" aria-label="Username" />
-                <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password" />
-                <div class="button-area d-flex">
-                  <button class="login" type="submit">Login</button>
-                  <button class="daftar" type="submit">DAFTAR</button>
-                </div>
-              </form>
-            </div>
-
-            <!-- Mobile Menu nav start -->
-            <div class="modal fade d-lg-none" id="mobileMenuNav" tabindex="-1" aria-labelledby="mobileMenuNavLabel" aria-hidden="true">
-              <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
-                  <div class="modal-header py-0 d-flex justify-content-between align-items-center">
-                    <h5 class="modal-title" id="mobileMenuNavLabel">Menu</h5>
-                    <div class="site-logo d-block d-lg-none">
-                      <a href="/"><img src="./assets/images/common/logo.png" alt="Site logo" /></a>
-                    </div>
-                    <div class="close-modal">
-                      <div class="close-icon" data-bs-dismiss="modal" aria-label="Close"></div>
-                    </div>
-                  </div>
-                  <div class="modal-body">
-                    <div class="navbar-collapse justify-content-between" id="mobileMenuNavContent">
-                      <!-- Menu list -->
-                      <ul class="navbar-nav">
-                        <li class="nav-item">
-                          <a class="nav-link" href="/"> <img src="./assets/images/common/home.png" alt="Menu" /> Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="javascript:void()"> <img src="./assets/images/common/list.png" alt="Menu" /> DAFTAR</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/promo.html"> <img src="./assets/images/common/gift.png" alt="Menu" /> Promo</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="mobileNavbarDropdown"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            <img src="./assets/images/common/book.png" alt="Menu" />
-                            Panduan
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="mobileNavbarDropdown">
-                            <li>
-                              <a class="dropdown-item" href="/bermain.html">
-                                <img src="./assets/images/common/game.png" alt="Menu" /> CARA BERMAIN
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="/daftar.html"
-                                ><img src="./assets/images/common/game.png" alt="Menu" /> PANDUAN DAFTAR
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="/keamanan.html">
-                                <img src="./assets/images/common/game.png" alt="Menu" />KEAMANAN</a
-                              >
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/peraturan.html"> <img src="./assets/images/common/spy.png" alt="Menu" /> Peraturan</a>
-                        </li>
-                      </ul>
-
-                      <div class="auth-btn">
-                        <a class="signups" href="javascript:void()">Sign Up</a>
-                        <a class="logins" href="javascript:void()">Login</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Mobile Menu nav end -->
-
-            <!-- Mobile login form start -->
-            <div class="modal fade" id="mobileMenuForm" tabindex="-1" aria-labelledby="mobileMenuFormLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="mobileMenuFormLabel">Masuk</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nama:</label>
-                        <input type="text" class="txt form-control model-txt" id="recipient-names" placeholder="Username" />
-                      </div>
-                      <div class="mb-3">
-                        <label for="kata-sandi" class="col-form-label">Kata Sandi:</label>
-                        <input
-                          type="text"
-                          class="txt form-control model-txt"
-                          id="recipient-name"
-                          placeholder="Silakan Masukkan Kata Sandi"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <button type="submit" class="btn btn-primary submit">Masuk</button>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <div class="mb-3-footer">
-                      <div class="content-model">
-                        <div class="text-model-left">
-                          <h6>belum punya akun?</h6>
-                          <button type="submit" class="btn btn-primary mb-3-btn">DAFTAR DISINI</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Mobile login form end -->
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- Header end here -->
-
     <!-- Banner start here -->
     <section class="banner-area">
-      <!-- Slider main container -->
-      <div class="banner-wrapper">
-        <div class="container">
-          <div class="banner-content text-center wow fadeInUp">
-            <div class="swiper banner-container">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                  <div class="circle"><img src="./assets/images/banner/slide1.png" alt="Circle" /></div>
+      <div class="container h-100">
+        <div class="banner-wrapper h-100">
+          <div class="banner-content">
+            <h2>Call Restoration 1 of Mohave County for Emergency Restoration Services</h2>
+            <a href="#" class="primary-btn">Call Now <img src="./assets/images/icon/right-arrow.png" alt="Right Arrow Icon" /></a>
+          </div>
+          <div class="banner-form d-flex justify-content-center justify-content-lg-end">
+            <form class="booking-form">
+              <h2>Call Now For ER Water Extraction</h2>
+              <p>And Begin The Drying Process</p>
+              <div class="d-flex gap-3">
+                <div class="form-group">
+                  <input type="text" placeholder="Full Name" />
                 </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                  <div class="circle"><img src="./assets/images/banner/slide2.png" alt="Circle" /></div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                  <div class="circle"><img src="./assets/images/banner/slide3.png" alt="Circle" /></div>
+                <div class="form-group">
+                  <input type="text" placeholder="Zip Code" />
                 </div>
               </div>
-            </div>
-            <div class="counter-number">
-              <img src="./assets/images/banner/shape.png" alt="Shape" />
-              <div class="counter-content">
-                <div class="number" id="jp1" method="jackpot" param="Sakong" separator=",">1,737,171,991</div>
-                <div class="text">PROGRESSIF JACKPOT</div>
+              <div class="form-group">
+                <input type="email" placeholder="E-mail" />
+                <div class="icon"><img src="./assets/images/icon/email.png" /></div>
               </div>
-            </div>
-            <a href="javascript:void()">
-              <button class="daftar-btn">DAFTAR</button>
-            </a>
-            <div class="note">Daftar sekarang dan dapatkan bonus menarik setiap minggu</div>
+              <div class="form-group input-group">
+                <select>
+                  <option>+1</option>
+                  <!-- Add more country codes here -->
+                </select>
+                <input type="tel" placeholder="(555) 000-0000" />
+
+                <div class="icon"><img src="./assets/images/icon/call.png" /></div>
+              </div>
+              <div class="form-group">
+                <select>
+                  <option>Business Service</option>
+                  <option>Residential Service</option>
+                  <!-- Add more service types here -->
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea rows="3" placeholder="Your message"></textarea>
+              </div>
+              <div class="btn">Book Now <i class="fas fa-arrow-right"></i></div>
+            </form>
           </div>
         </div>
-      </div>
-      <div class="headline-scroll">
-        <marquee behavior="scroll" method="message" direction="left">
-          Selamat datang di asikqq, Situs Poker Pkv Games Online Terpercaya di indonesia
-        </marquee>
-      </div>
-      <div class="curp-shape">
-        <img src="./assets/images/banner/banner-shape.png" alt="Shape" />
       </div>
     </section>
     <!-- Banner end here -->
 
-    <!-- Feature start here -->
-    <section class="feature-area section-padding">
+    <!-- About us start here -->
+    <section class="about-us">
       <div class="container">
-        <div class="section-heading wow fadeInUp">
-          <h3>Selamat Datang di</h3>
-          <h2>ASIKQQ</h2>
-        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Water Damage Restoration in Cityname, State</h1>
 
-        <div class="paragraph wow fadeInUp">
-          Asikqq adalah situs PKV GAMES resmi yang menyediakan banyak permainan kartu online. AsikQQ sudah dipercaya oleh ribuan member
-          sejak tahun 2015. Kami tidak pernah lelah untuk memberikan anda pelayanan terbaik kami selama 24 jam setiap hari. AsikQQ tidak
-          pernah close ataupun break (istirahat) meskipun hari libur nasional. Kami akan terus setia melayani anda kapanpun anda bermain.
-          Jika anda memiliki kendala atau masalah , jangan sungkan untuk datang chat ke customer service kami untuk bertanya. Customer
-          service profesional kami akan selalu standby untuk membantu megatasi masalah yang anda alami. Berikut adalah daftar permainan yang
-          tersedia di AsikQQ :
-        </div>
+            <p>
+              Picture this: It’s the middle of the night, and you and your family are fast asleep in your beds. Unbeknownst to you, in the
+              quiet of the night, a pipe breaks in your basement. Gallons of water – cold, relentless, and indifferent – start to pour into
+              the lower level of your home. Within just a couple of minutes, priceless mementos, expensive furniture, and new electronics
+              are all destroyed. Water begins to pool across every surface of the floor and eventually makes its way into your home’s
+              foundation. Mold begins to spread, and before you know it, your home is now hazardous to your family. <br />
+              <br />
+              Scenarios like these are nightmare fuel for homeowners in Mohave. If you’ve never dealt with the fallout of water damage, you
+              may not think such a situation could ever happen to you. Unfortunately, water damage is quite common in the United States,
+              ranking second behind wind and hail damage for the most common type of home insurance claim. In fact,
+              <strong>water damage affects approximately 14,000 individuals in the U.S. daily.</strong>   <br />
+              <br />The consequences of such an occurrence are not just an issue of inconvenience; it’s a critical juncture that requires
+              prompt water damage restoration. This underscores the significance of Restoration 1 Of Mohave County – a step that is as
+              essential as it is overlooked.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <div class="about-form">
+              <div class="about-form-inner">
+                <div class="thumb"><img class="w-100" src="./assets/images/common/logo.png" alt="Site logo" /></div>
+                <div class="radio-action">
+                  <div class="radio-action-inner">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1"> Water Damage Restoration in Cityname, </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1"> Water Damage Restoration in Cityname, </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1"> Water Damage Restoration in Cityname, </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1"> Water Damage Restoration in Cityname, </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1"> Water Damage Restoration in Cityname, </label>
+                    </div>
+                  </div>
+                </div>
 
-        <!-- Popular elements -->
-        <div class="popular-part mt-0 mt-md-5 wow fadeInUp">
+                <div class="submit-action d-grid">
+                  <h6 class="text-center">Serivces Area</h6>
+                  <select>
+                    <option>Inter Miami</option>
+                    <option>California</option>
+                    <option>Newyork</option>
+                    <!-- Add more country codes here -->
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About us end here -->
+
+    <!-- Features start here -->
+    <section class="feature">
+      <!-- Feature top start -->
+      <div class="feature-top">
+        <div class="container">
+          <div class="feature-top-wrapper">
+            <h3>Restoration 1: The Expert Choice for Water Damage Restoration in Cityname, State</h3>
+            <p>
+              When faced with an unexpected water damage situation at home, it's crucial to act swiftly to safeguard your property and your
+              loved ones. Restoration 1 of Mohave County is committed to promptly addressing the issue and taking all necessary measures to
+              prevent further damage. Although water damage is a common form of property loss, its impact on your home and life is
+              significant. We recognize the distressing nature of such events and offer 24/7 emergency assistance to provide peace of mind
+              when you need it most. <br />
+              <br />
+              Whether the water damage in your home is due to localized flooding, a plumbing or appliance issue, or a slow, unnoticed leak,
+              our expert water damage contractors are fully equipped and licensed to help remove the water and restore your home to its
+              pre-damage condition. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Feature top end -->
+
+      <!-- Feature bottom start -->
+      <div class="feature-bottom">
+        <div class="container">
+          <div class="feature-bottom-wrapper">
+            <h4>Reliable Service from a Water Damage Company That Cares</h4>
+            <p>
+              After your home suffers damage, we understand the significant impact it has on your life. It’s normal to feel overwhelmed and
+              unsure of what steps to take next. At Restoration 1 of Mohave County, we are committed to always doing right by our customers.
+              We strictly adhere to industry guidelines and regulations to promptly mitigate property damage, minimizing the need for
+              extensive repairs to restore your property to its original state. <br />
+              <br />
+              Our devoted team will ensure that you are well informed about the water damage in your home and the next steps you should
+              take. Rather than instilling fear or trying to upsell you on unneeded service, our water damage contractors empower you with
+              knowledge so that you can make informed decisions. After all, your property is more than just a house, and we’re here to help
+              you get back home.  <br />
+              <br />
+              <strong
+                >As certified disaster relief experts, we focus on a number of factors that necessitate water damage clean-up in cityname,
+                state, including:</strong
+              >
+              <br />
+            </p>
+
+            <div class="thumb">
+              <ul>
+                <li>Appliance Failures</li>
+                <li>Frozen Pipes</li>
+                <li>Leaky Pipes</li>
+                <li>Clogged Gutters and Drains</li>
+                <li>Sewage Backup</li>
+                <li>Natural Disasters and Flooding</li>
+                <li>Broken Water Heaters</li>
+                <li>HVAC Units</li>
+                <li>Sump Pumps</li>
+                <li>Much More</li>
+              </ul>
+            </div>
+
+            <p>
+              As a locally owned water damage company, you can count on our team to be there for you, whether it’s 1AM in the morning or 3
+              in the afternoon. Our clients recommend their friends and family for water damage restoration because we prioritize:
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Feature bottom end -->
+
+      <!-- Feature support start-->
+      <div class="feature-support">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-5">
-              <div class="bandar-q mb-4 mb-mb-lg-1 wow fadeInUp">
-                <div class="bandar-inner">
-                  <img src="./assets/images/feature/bandar q.png" alt="Bandar" />
-                  <h6 class="title">BandarQ</h6>
-                  <div class="ribbon">
-                    <img src="./assets/images/feature/populer.png" alt="Ribbon" />
-                  </div>
+            <div class="col-lg-6">
+              <div class="support-item d-flex gap-2">
+                <div class="thumb">
+                  <img class="" src="./assets/images/icon/support-1.png" alt="Support feature image" />
+                </div>
+                <div class="content">
+                  <h6>Transparent Communication</h6>
+                  <p>
+                    We are here for you and will communicate throughout the water damage clean-up process so you always know what’s
+                    happening.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="contact-info wow fadeInUp">
-                <h4>Kontak Resmi AsikkQQ</h4>
 
-                <div class="social-app d-flex justify-content-center">
-                  <div class="social-list">
-                    <a href="https://wa.me/85595306918 " target="_blank" class="social-inner">
-                      <img src="./assets/images/feature/whatsapp.png" alt="Social App" />
-                      <span class="name whatsapp">Whatsapp</span>
-                      <span class="number">+85595306918</span>
-                    </a>
-                  </div>
-                  <div class="social-list">
-                    <a href="https://t.me/Asikqiu" target="_blank" class="social-inner">
-                      <img src="./assets/images/feature/telegram.png" alt="Social App" />
-                      <span class="name telegram">Telegram</span>
-                      <span class="number">@Asikqui</span>
-                    </a>
-                  </div>
-                  <div class="social-list">
-                    <a href="https://secure.livechatinc.com/licence/6007151/v2/open_chat.cgi" target="_blank" class="social-inner">
-                      <img src="./assets/images/feature/livechat.png" alt="Social App" />
-                      <span class="name livechat">LiveChat</span>
-                    </a>
-                  </div>
+            <div class="col-lg-6">
+              <div class="support-item d-flex gap-2">
+                <div class="thumb">
+                  <img class="" src="./assets/images/icon/support-2.png" alt="Support feature image" />
                 </div>
-                <div class="download-app">
-                  <a href="https://github.com/playcdn/playcdn.github.io/releases/download/v1.0/pkvgames.apk">
-                    <img src="./assets/images/feature/android.png" alt="Android" /> Download app for Android
-                  </a>
+                <div class="content">
+                  <h6>24/7 Service</h6>
+                  <p>
+                    Our water damage contractors are available 24 hours a day, seven days a week, to ensure you’ve got help when you’re
+                    facing an emergency. Simply give us a call, and we’ll dispatch a team to help within minutes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="support-item d-flex gap-2">
+                <div class="thumb">
+                  <img class="" src="./assets/images/icon/support-3.png" alt="Support feature image" />
+                </div>
+                <div class="content">
+                  <h6>Exceptional Customer Care</h6>
+                  <p>We truly value our customers and are committed to offering honest services at a fair price.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="support-item d-flex gap-2">
+                <div class="thumb">
+                  <img class="" src="./assets/images/icon/support-4.png" alt="Support feature image" />
+                </div>
+                <div class="content">
+                  <h6>High-Quality and Effective Water Damage Restoration</h6>
+                  <p>
+                    We’re not your average water damage contractor. We use state-of-the-art tools and follow strict guidelines to help you
+                    get back to normal life ASAP. 
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <!-- Feature support end -->
 
-        <!-- Feature elements -->
-        <div class="features-element wow fadeInUp">
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-1.png" alt="Feature" />
-              </div>
-              <div class="item-title">Capsa Susun</div>
-            </div>
+      <!-- Service start here -->
+      <div class="service">
+        <div class="container">
+          <!-- Service wrapper -->
+          <div class="service-wrapper">
+            <h2>How Does a Water Damage Company in Cityname, State, Provide Peace of Mind?</h2>
+            <p>
+              When it comes to property management, whether it’s for personal or commercial use, acting quickly and effectively in the face
+              of challenges is incredibly important. Whether you’re dealing with the aftermath of a natural disaster, such as a flood, or
+              managing water damage from a faulty toilet, the initial steps you take can make a huge difference in the final outcome. While
+              some property owners try to handle these tasks themselves, it’s often necessary to hire a professional water damage
+              restoration company. <br />
+              <br />
+              <strong>Here’s how water damage companies provide peace of mind during your trying time.</strong>
+            </p>
           </div>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-2.png" alt="Feature" />
+          <!-- Service Feature -->
+          <div class="service-feature">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-1.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Advanced Equipment and Strategies</h5>
+                    <p>
+                      Hiring a water damage restoration company offers the valuable expertise and experience necessary for effective
+                      disaster recovery. These companies employ certified professionals skilled in water damage restoration, fire damage
+                      clean-up, and mold remediation. Their experience enables them to accurately assess the damage and create a customized
+                      mitigation plan. Beyond clean-up, these specialists know how to minimize further damage and prevent potential health
+                      hazards, ensuring your property is restored to a safe and habitable condition.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="item-title">Domino qq</div>
+
+              <div class="col-lg-4">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-2.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Experience and Expertise</h5>
+                    <p>
+                      Hiring a water damage restoration company offers the valuable expertise and experience necessary for effective
+                      disaster recovery. These companies employ certified professionals skilled in water damage restoration, fire damage
+                      clean-up, and mold remediation. Their experience enables them to accurately assess the damage and create a customized
+                      mitigation plan. Beyond clean-up, these specialists know how to minimize further damage and prevent potential health
+                      hazards, ensuring your property is restored to a safe and habitable condition.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-3.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Help with Compliance and Insurance Claims</h5>
+                    <p>
+                      Coping with the aftermath of a disaster involves handling insurance claims, meeting regulatory requirements, and
+                      adhering to compliance standards. These processes can be overwhelming for property owners who are unfamiliar with
+                      them. Fortunately, an expert water damage contractor in cityname, state will have a deep understanding of insurance
+                      policies. They collaborate directly with your insurance provider to speed up the claims process and optimize your
+                      coverage. <br />
+                      <br />
+                      Reputable water damage contractors such as Restoration 1 also adhere to industry regulations and safety standards.
+                      This commitment helps ensure compliance with legal requirements and regulatory mandates, reducing the likelihood of
+                      mistakes and oversights.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-4.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Save Time and Money</h5>
+                    <p>
+                      Many individuals who own property avoid contacting disaster relief companies because they believe the service is too
+                      expensive. In reality, professional water damage restoration can save you both time and money. Quick and thorough
+                      mitigation reduces the risk of secondary damage and prevents problems like mold growth and structural deterioration.
+                      Both issues can significantly increase repair costs if not addressed promptly. <br />
+                      <br />
+                      Working with a water damage company also minimizes downtime and disruption, allowing you to resume normal operations
+                      or reoccupy your home sooner. In the business world, every moment lost to downtime equals potential revenue losses.
+                      This highlights the importance of efficient yet effective water damage restoration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-5.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Compassion During Trying Times</h5>
+                    <p>
+                      Beyond the technicalities, there’s a human aspect to consider. The stress and emotional toll of a home disaster can be
+                      overwhelming. At Restoration 1 Of Mohave County, we know first-hand how trying these circumstances can be on your
+                      family. That’s why we offer more than water damage restoration services. We also strive to provide support and
+                      reassurance through trying times. We’re not just restoring your property; we’re helping to rebuild your life, too.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-6.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Peace of Mind</h5>
+                    <p>
+                      When you work with a water restoration company, you could argue that the biggest benefit is the peace of mind it gives
+                      you during a crisis. Dealing with a disaster is overwhelming and emotionally draining. Knowing that experienced
+                      professionals are mitigating your water damage can help reduce much of the stress and anxiety involved with such an
+                      emergency. <br />
+                      <br />
+                      Water damage restoration technicians from Restoration 1 are trusted partners in your recovery journey who help manage
+                      logistics, coordinate clean-up efforts, and provide ongoing support and communication. Their presence allows you to
+                      focus on your loved ones and address business continuity concerns with confidence and peace of mind.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <div class="service-item">
+                  <div class="thumb">
+                    <img src="./assets/images/icon/service-icon-7.png" alt="Service Icon" />
+                  </div>
+                  <div class="content">
+                    <h5>Restoration 1 is Here for You</h5>
+                    <p>
+                      Remember: When a water emergency strikes your home or business, don't try to handle it alone. Trust professionals to
+                      help you minimize damage, recover, and rebuild. Because the truth is that using a water damage restoration mitigation
+                      company isn’t just about convenience. It’s a strategic investment that can protect your property and well-being.
+                      <br />
+                      <br />
+                      At Restoration 1 of Mohave County, we promise to do right by our customers. We follow all industry guidelines and
+                      regulations to mitigate damage to your property as quickly as possible, minimizing the repairs needed to restore your
+                      property. Our dedicated team will ensure you understand what's happening with your property and what comes next, so
+                      you can make informed decisions when they matter most.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- Service end here -->
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-3.png" alt="Feature" />
-              </div>
-              <div class="item-title">ADU QQ</div>
-            </div>
+      <!-- Reasons start here -->
+      <div class="reason">
+        <div class="container">
+          <!-- Service wrapper -->
+          <div class="reason-wrapper">
+            <h2>Top 5 Reasons for Water Damage Restoration in Cityname, State</h2>
+            <p>
+              Did you know that almost 40% of homeowners have suffered a loss due to water damage? When water floods your home, it has the
+              potential to cause contamination, destroy paint, and even cause mold growth. The good news is that most water damage
+              situations in Arizona can be avoided with proper knowledge. What steps can you take to safeguard your home from water damage?
+              Here are seven methods to help you prepare.
+            </p>
           </div>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-4.png" alt="Feature" />
+          <!-- Reasons Feature -->
+          <div class="reason-feature">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    1. Faulty Appliances
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-lg-flex gap-4 flex-lg-row flex-column">
+                    <div class="thumb mb-lg-0 mb-3">
+                      <img src="./assets/images/common/reason-1.png" alt="Reason image" />
+                    </div>
+                    <div class="content">
+                      <p>
+                        Like most of today’s consumer products, appliances start to break down as they get old. One of the most common
+                        problems is that their pipes can rust, and hoses can weaken, leading to leaks. For dishwashers, issues like worn
+                        gaskets, broken doors, and clogged drains are common culprits. These leaks can damage your flooring, electrical
+                        system, and paint. You can prevent buildup by running a quart of vinegar through the dishwasher monthly and scraping
+                        and rinsing dishes before loading. <br />
+                        <br />
+                        Washing machine floods are often caused by leaky hoses that worsen over time, risking damage to your home.
+                        Installing a washing machine valve shutoff kit can prevent potential flooding from the massive six gallons of water
+                        per minute. <br />
+                        <br />
+                        Refrigerators can also cause problems, as they produce excess water that can pool at the bottom of your fridge when
+                        drain lines are clogged. Plus, a leak in the water supply line to the ice machine can lead to significant standing
+                        water in your home. To prevent flooding, ensure your refrigerator is well insulated, avoid moving it frequently, and
+                        regularly check for leaks.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="item-title">BD QQ</div>
-              <div class="ribbon">
-                <img src="./assets/images/feature/new.png" alt="Ribbon" />
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    2. Broken or Damaged Pipes
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-lg-flex gap-4 flex-lg-row flex-column">
+                    <div class="thumb mb-lg-0 mb-3">
+                      <img src="./assets/images/common/reason-2.png" alt="Reason image" />
+                    </div>
+                    <div class="content">
+                      <p>
+                        Plumbing systems, particularly in older residences, are vulnerable to blockages and harm. To prevent plumbing issues
+                        from arising, keep an eye out for fractures, protrusions, discolorations, and other indications of moisture on your
+                        ceilings or floors. If you notice a leak, it may indicate damage in other areas as well. Increases in your water
+                        bill may suggest that you have further damage to your landscaping, flooring, and foundation. <br />
+                        <br />
+                        Keep an eye out for pipes in areas prone to gathering water, such as crawl spaces, cabinets, and attics. If you
+                        observe any indications of water damage, contact a plumber immediately to prevent larger issues in the future. Make
+                        sure to inspect and insulate your pipes annually before the onset of winter. Pipes can burst and freeze within a few
+                        hours, causing water damage to your entire house.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    3. Natural Disasters
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-lg-flex gap-4 flex-lg-row flex-column">
+                    <div class="thumb mb-lg-0 mb-3">
+                      <img src="./assets/images/common/reason-3.png" alt="Reason image" />
+                    </div>
+                    <div class="content">
+                      <p>
+                        While blizzards and hurricanes aren’t common occurrences in Arizona, our state does suffer from natural disasters.
+                        We’re talking floods, earthquakes, and wildfires that often result in residential and commercial water damage. In
+                        the case of flooding, large amounts of water can’t be absorbed by the land and may overflow into your home. A flood
+                        alarm and warning system can help you protect your home against a natural disaster. You should also consider sump
+                        pumps for your basement or grading that carries water away from your home. Make sure you know where your water main
+                        is and shut it off during an emergency or when you’re away on vacation. If you come home and your basement is
+                        flooded unexpectedly, your best bet is to call a disaster recovery company like Restoration 1 for water damage
+                        clean-up in cityname, state.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    4. Backed-Up Drains
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-lg-flex gap-4 flex-lg-row flex-column">
+                    <div class="thumb mb-lg-0 mb-3">
+                      <img src="./assets/images/common/reason-4.png" alt="Reason image" />
+                    </div>
+                    <div class="content">
+                      <p>
+                        If you have a family or even just a significant other, you probably know first-hand how fast bathroom and sink
+                        drains can get clogged. When clogs happen, pipes can deteriorate, and structural damage follows. When left
+                        unattended, clogged drains can even lead to damage in other areas of your home. <br />
+                        <br />
+                        For instance, a blocked toilet can cause a backup into your sink. It might even lead to warping of the floorboards
+                        and wall support. Small screens can assist in preventing unwanted materials from obstructing drains. Pouring boiling
+                        water down your drain once a month can aid in dissolving grease, soap scum, and other debris before it obstructs
+                        your pipes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    5. Sump Pump Malfunctions
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body d-lg-flex gap-4 flex-lg-row flex-column">
+                    <div class="thumb mb-lg-0 mb-3">
+                      <img src="./assets/images/common/reason-5.png" alt="Reason image" />
+                    </div>
+                    <div class="content">
+                      <p>
+                        Remember to keep an eye on your sump pump. If it stops working, it could lead to a major flood in your basement,
+                        resulting in mold growth and bacteria concerns. To ensure your sump pump functions properly, make sure it’s always
+                        standing upright. Check and see if the vent hole in the discharge pipe is clear and if the outlet pipes are joined
+                        tightly and drained at least six feet away from your house. If you spot any leaks, contact a professional water
+                        damage company as soon as you can to prevent more damage from happening.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- Reasons end here -->
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-5.png" alt="Feature" />
+      <!-- section banner start -->
+      <div class="ads-banner">
+        <div class="container">
+          <div class="ads-banner-wrapper">
+            <div class="banner-content">
+              <h2>Your Dependable Water Damage Company in Cityname, State</h2>
+              <p class="text-lg-start text-center">
+                Restoration 1 of Mohave County, a trusted name in the restoration industry, epitomizes commitment, growth, and
+                community-centric service. Since 2023, our family-owned and operated company has provided top-tier water damage restoration
+                services across Arizona. We're more than just a service provider. We're part of the community, constantly evolving and
+                expanding our expertise to meet your every need. We’re proud to serve local home and business owners and work tirelessly to
+                help restore your property and peace of mind. If you're looking for a local team of water mitigation experts who value true
+                customer service and real-deal hard work, contact our office today.
+              </p>
+              <div class="my-4"><img class="w-100" src="./assets/images/common/ads-inner-thumb.png" alt="Ads Inner Thumb" /></div>
+              <div class="d-flex justify-content-lg-start justify-content-center">
+                <a href="#" class="primary-btn mt-lg-2 mt-0"
+                  >Call Now <img src="./assets/images/icon/right-arrow.png" alt="Right Arrow Icon"
+                /></a>
               </div>
-              <div class="item-title">Bandar POKER</div>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- section-banner end -->
+    </section>
+    <!-- Features end here -->
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-6.png" alt="Feature" />
-              </div>
-              <div class="item-title">bandar66</div>
-            </div>
-          </div>
+    <!-- Testimonial Start Here -->
+    <section class="testimonial py-lg-5 py-4">
+      <div class="container">
+        <div class="testimonial-wrapper">
+          <h2>What Client Say About Us</h2>
+          <!-- Slider main container -->
+          <div class="testimonial-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-7.png" alt="Feature" />
-              </div>
-              <div class="item-title">POKER ONLINE</div>
-            </div>
-          </div>
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-8.png" alt="Feature" />
-              </div>
-              <div class="item-title">sakong</div>
-            </div>
-          </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-9.png" alt="Feature" />
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
               </div>
-              <div class="item-title">perand baccarat</div>
-            </div>
-          </div>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-10.png" alt="Feature" />
-              </div>
-              <div class="item-title">perand dadu</div>
-            </div>
-          </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
 
-          <div class="feature-item text-center">
-            <div class="feature-inner">
-              <div class="item-thumb">
-                <img src="./assets/images/feature/feature-11.png" alt="Feature" />
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
               </div>
-              <div class="item-title">adu sakong</div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <h6>Johan Smith</h6>
+
+                  <ul class="p-0 review-list">
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-filled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                    <li class=""><img src="./assets/images/icon/star-outfilled.png" alt="Review Icon" /></li>
+                  </ul>
+
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s,
+                  </p>
+
+                  <h6 class="text-end">Johan Doe</h6>
+                </div>
+              </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="curp-shape bg-lite">
-      <img src="./assets/images/common/yellow.png" alt="Shape" />
-    </div>
-    <!-- Feature end here -->
-
-    <!-- Support start here -->
-    <section class="support-area section-padding bg-lite">
-      <div class="container">
-        <div class="section-heading wow fadeInUp">
-          <h2>SUPPORT BANK</h2>
-        </div>
-
-        <div class="paragraph wow fadeInUp">
-          AsikQQ memberikan anda kemudahan dalam melakukan transaksi deposit dan withdraw. Kami menyediakan bank BCA, bank BNI, bank BRI,
-          bank MANDIRI, bank DANAMON, dan bank CIMB NIAGA. Namun, jangan khawatir bagi anda yang menggunakan bank lain, anda tetap dapat
-          melakukan deposit dengan cara transfer antar bank ke rekening kami. Selain itu , kami juga menyediakan beberapa e-Wallet seperti
-          DANA, OVO, LINKAJA, dan GOPAY. Anda tidak akan dikenakan biaya admin jika deposit ke sesama e-Wallet. Dan kami juga menyediakan
-          deposit via PULSA TELKOMSEL dan PULSA XL.
-        </div>
-
-        <!-- Supprt elements -->
-        <div class="row wow fadeInUp">
-          <div class="col-md-6">
-            <div class="support-item mb-4 mb-md-0">
-              <div class="support-title">
-                <h5>5 Last Deposit</h5>
-              </div>
-              <div class="support-content">
-                <table>
-                  <tr>
-                    <td>CXD***</td>
-                    <td>24/12</td>
-                    <td>460,000</td>
-                  </tr>
-                  <tr>
-                    <td>Dik***</td>
-                    <td>24/12</td>
-                    <td>50,000</td>
-                  </tr>
-                  <tr>
-                    <td>goo***</td>
-                    <td>24/12</td>
-                    <td>10,00,000</td>
-                  </tr>
-                  <tr>
-                    <td>N0v***</td>
-                    <td>24/12</td>
-                    <td>17,000</td>
-                  </tr>
-                  <tr>
-                    <td>iyu***</td>
-                    <td>24/12</td>
-                    <td>150,000</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="support-item">
-              <div class="support-title">
-                <h5>5 Last Withdraw</h5>
-              </div>
-              <div class="support-content">
-                <table>
-                  <tr>
-                    <td>Bon***</td>
-                    <td>24/12</td>
-                    <td>16,000</td>
-                  </tr>
-                  <tr>
-                    <td>Dik***</td>
-                    <td>24/12</td>
-                    <td>50,000</td>
-                  </tr>
-                  <tr>
-                    <td>goo***</td>
-                    <td>24/12</td>
-                    <td>10,00,000</td>
-                  </tr>
-                  <tr>
-                    <td>N0v***</td>
-                    <td>24/12</td>
-                    <td>17,000</td>
-                  </tr>
-                  <tr>
-                    <td>iyu***</td>
-                    <td>24/12</td>
-                    <td>150,000</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="curp-shape">
-      <img src="./assets/images/common/white.png" alt="Shape" />
-    </div>
-    <!-- Support end here -->
-
-    <!-- Partner start here -->
-    <section class="partner-area section-padding">
-      <div class="container">
-        <div class="section-heading wow fadeInUp">
-          <h2>OUR PARTNER</h2>
-        </div>
-        <div class="paragraph wow fadeInUp">
-          Bagi anda yang ingin mencoba keberuntungan di website pkv games lainnya, kami dapat merekomendasikan anda 2 website lain, kami
-          juga dapat menjamin 100% keamanan dan kenyamanan anda dalam bermain jika daftar di website berikut :
-        </div>
-
-        <!-- Partner Item -->
-        <div class="row wow fadeInUp">
-          <div class="col-md-6">
-            <div class="partner-item">
-              <div class="partner-thumb">
-                <img src="./assets/images/partner/partner-1.png" alt="Partner" />
-              </div>
-              <div class="partner-title" onclick="window.open('https://180.215.14.113/')"><h5>DAFTAR DISINI</h5></div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="partner-item">
-              <div class="partner-thumb">
-                <img src="./assets/images/partner/partner-2.png" alt="Partner" />
-              </div>
-              <div class="partner-title" onclick="window.open('https://180.215.14.117/')"><h5>DAFTAR DISINI</h5></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Partner end here -->
-
-    <!-- Footer start here -->
-    <footer>
-      <div class="curp-shape">
-        <img src="./assets/images/common/yellow.png" alt="Shape" />
-      </div>
-      <div class="container">
-        <div class="main-footer section-padding">
-          <!-- Support bank footer widget -->
-          <div class="footer-widget wow fadeInUp">
-            <div class="widget-title">SUPPORT BANK</div>
-            <div class="widget-content">
-              <div class="support-banks">
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-1.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-2.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-3.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-4.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-5.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-6.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-7.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-8.png" alt="Bank Name" />
-                  </div>
-                </div>
-                <div class="bank-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/bank-9.png" alt="Bank Name" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Licenced footer widget -->
-          <div class="footer-widget wow fadeInUp">
-            <div class="widget-title">LISENCED</div>
-            <div class="widget-content">
-              <div class="licence-lists">
-                <div class="licence-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/licence-1.png" alt="Licenced Name" />
-                  </div>
-                </div>
-                <div class="licence-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/licence-2.png" alt="Licenced Name" />
-                  </div>
-                </div>
-                <div class="licence-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/licence-3.png" alt="Licenced Name" />
-                  </div>
-                </div>
-                <div class="licence-list">
-                  <div class="list-inner">
-                    <img src="./assets/images/footer/licence-4.png" alt="Licenced Name" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social footer widget -->
-          <div class="footer-widget wow fadeInUp">
-            <div class="widget-title">CONTACT</div>
-            <div class="widget-content">
-              <div class="social-app d-flex">
-                <div class="social-list">
-                  <a href="https://wa.me/85595306918 " target="_blank" class="social-inner">
-                    <img src="./assets/images/feature/whatsapp.png" alt="Social App" />
-                    <span class="name whatsapp">Whatsapp</span>
-                    <span class="number">+85595306918</span>
-                  </a>
-                </div>
-                <div class="social-list">
-                  <a href="https://t.me/Asikqiu" target="_blank" class="social-inner">
-                    <img src="./assets/images/feature/telegram.png" alt="Social App" />
-                    <span class="name telegram">Telegram</span>
-                    <span class="number">@Asikqui</span>
-                  </a>
-                </div>
-                <div class="social-list">
-                  <a href="https://secure.livechatinc.com/licence/6007151/v2/open_chat.cgi" target="_blank" class="social-inner">
-                    <img src="./assets/images/feature/livechat.png" alt="Social App" />
-                    <span class="name livechat">LiveChat</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="copyright">Copyright © 2015 <a href="javascript:void()">AsikQQ</a>. All rights reserved.</div>
-      </div>
-    </footer>
-    <!-- Footer end here -->
-
-    <!-- Bubbles start here -->
-    <ul class="background">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <!-- Bubbles end here -->
+    <!-- Testimonial End Here -->
 
     <!-- Scroll Strat Here -->
     <div class="scroll-top">
@@ -706,101 +885,15 @@
     </div>
     <!-- Scroll End Here -->
 
-    <!-- Livechat start here -->
-    <div id="chat-widget-container">
-      <iframe
-        allow="autoplay; microphone *; camera *; display-capture *; picture-in-picture *; fullscreen *;"
-        src="https://secure.livechatinc.com/customer/action/open_chat?license_id=6007151&amp;group=0&amp;embedded=1&amp;widget_version=3&amp;unique_groups=0"
-        allowtransparency="true"
-        id="chat-widget"
-        name="chat-widget"
-        title="LiveChat chat widget"
-        scrolling="no"
-        style="
-          width: 100%;
-          height: 100%;
-          min-height: 0px;
-          min-width: 0px;
-          margin: 0px;
-          padding: 0px;
-          background-image: none;
-          background-position: 0% 0%;
-          background-size: initial;
-          background-attachment: scroll;
-          background-origin: initial;
-          background-clip: initial;
-          background-color: rgba(0, 0, 0, 0);
-          border-width: 0px;
-          float: none;
-          position: absolute;
-          inset: 0px;
-          transition: none 0s ease 0s !important;
-        "
-      ></iframe>
-    </div>
-    <!-- Livechat end here -->
-
     <!-- Jquery Js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Boostrap Js -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper Js -->
-    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Wow Js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <!-- Custom Js -->
     <script type="text/javascript" src="./assets/js/custom.js"></script>
-    <!-- Counter Ready JS -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        var delay = 1000000;
-        var jackpot = 0;
-        pull_jackpot();
-        var timer;
-        function pull_jackpot() {
-          var nominal = 1737255388;
-          if (jackpot == 0) jackpot = parseInt(nominal - 100000);
-          var amount = (100000 / delay) * 1;
-          timer = setInterval(function () {
-            jackpot = set_jackpot(jackpot, nominal, amount);
-          }, 1);
-        }
-        function set_jackpot(jackpot, nominal, amount) {
-          var jackpot = jackpot + amount;
-          if (jackpot >= nominal) {
-            clearInterval(timer);
-            pull_jackpot();
-          } else {
-            var result = addCommas(parseInt(jackpot));
-            $("#jp1").html(result);
-          }
-          return jackpot;
-        }
-        function addCommas(nStr) {
-          nStr += "";
-          x = nStr.split(".");
-          x1 = x[0];
-          x2 = x.length > 1 ? "." + x[1] : "";
-          var rgx = /(\d+)(\d{3})/;
-          while (rgx.test(x1)) {
-            x1 = x1.replace(rgx, "$1" + "," + "$2");
-          }
-          return x1 + x2;
-        }
-      });
-    </script>
-    <!-- License Script -->
-    <script type="text/javascript">
-      var __lc = {};
-      __lc.license = 6007151;
-      (function () {
-        var lc = document.createElement("script");
-        lc.type = "text/javascript";
-        lc.async = true;
-        lc.src = ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.livechatinc.com/tracking.js";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(lc, s);
-      })();
-    </script>
   </body>
 </html>

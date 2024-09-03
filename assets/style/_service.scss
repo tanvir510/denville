@@ -1,0 +1,276 @@
+.service {
+  .service-wrapper {
+    height: 480px;
+    background-image: url("../images/common/service-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+
+    @include tablet {
+      height: auto;
+      padding: 40px 20px 30px;
+    }
+
+    h2 {
+      font-size: 45px;
+      line-height: 55px;
+      color: $white;
+      font-family: $primaryFont;
+      margin-bottom: 20px;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+
+      @include mobile-sm {
+        font-size: 28px;
+        line-height: 35px;
+      }
+    }
+
+    p {
+      color: $white;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+  .service-feature {
+    padding: 0px 40px 0px;
+    transform: translateY(-90px);
+
+    @include tablet {
+      padding: 30px 5px;
+      transform: translateY(0px);
+    }
+    .col-lg-12 {
+      &:last-child {
+        .service-item {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .service-item {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 11px;
+      border-radius: 30px;
+      padding: 30px 25px 30px 25px;
+      margin-bottom: 25px;
+      min-height: 96%;
+      transition: all ease-in-out 0.5s;
+      background-color: $white;
+      @include tablet {
+        padding: 25px;
+      }
+      &:hover {
+        background-color: #f8f7f5;
+      }
+      .thumb {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        p {
+          margin-bottom: 0;
+        }
+        h5 {
+          font-size: 20px;
+          line-height: 26px;
+          color: #119ddb;
+          font-family: $primaryFont;
+          margin-bottom: 10px;
+          width: 100%;
+          @include tablet {
+            max-width: 100%;
+            font-size: 20px;
+            line-height: 26px;
+          }
+
+          @include mobile-sm {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reason {
+  padding-bottom: 40px;
+  @include tablet {
+    padding-bottom: 20px;
+  }
+  .reason-wrapper {
+    height: auto;
+    background-image: url("../images/common/reason-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    border-radius: 20px;
+
+    @include tablet {
+      height: auto;
+      padding: 40px 20px 30px;
+    }
+
+    h2 {
+      max-width: 890px;
+      font-size: 45px;
+      line-height: 55px;
+      color: $white;
+      font-family: $primaryFont;
+      margin-bottom: 20px;
+      text-align: center;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+
+      @include mobile-sm {
+        font-size: 28px;
+        line-height: 35px;
+      }
+    }
+
+    p {
+      color: $white;
+      max-width: 960px;
+      width: 100%;
+      text-align: center;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+  .reason-feature {
+    .accordion-item {
+      margin-bottom: 20px;
+      border: none;
+      @include tablet {
+        margin-bottom: 15px;
+      }
+      .accordion-button {
+        border-radius: 65px;
+        font-size: 24px;
+        line-height: 38px;
+        color: #119ddb;
+        font-family: $primaryFont;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 10px 30px;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 11px;
+        &.collapsed {
+          background-color: #f2f2f2;
+          box-shadow: none;
+        }
+        @include tablet {
+          max-width: 100%;
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        @include mobile-sm {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+
+      .accordion-body {
+        @include tablet {
+          padding: 0px 10px;
+        }
+
+        .thumb {
+          img {
+            @include tablet {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .accordion-button::after {
+      width: 2rem;
+      height: 2rem;
+      background-size: 30px;
+      background-image: url("../images/icon/plus.png");
+      transition: all 0.5s;
+    }
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("../images/icon/minus.png");
+    }
+  }
+}
+
+.ads-banner {
+  .ads-banner-wrapper {
+    height: 800px;
+    background-image: url("../images/common/ads-banner.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      height: auto;
+      background-position: 20% 0%;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      max-width: 500px;
+      font-size: 40px;
+      line-height: 50px;
+      color: $white;
+      font-family: $primaryFont;
+      margin-bottom: 30px;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+        text-align: center;
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: 20px;
+      }
+
+      @include mobile-sm {
+        font-size: 28px;
+        line-height: 30px;
+      }
+    }
+
+    p {
+      color: $white;
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}

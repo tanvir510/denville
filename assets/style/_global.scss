@@ -1,10 +1,10 @@
 body {
   font-weight: 400;
-  font-family: $poppins;
+  font-family: $secondaryFont;
   margin: 0;
   padding: 0;
   font-size: 15px;
-  background: $primary;
+  // background: $primary;
 }
 
 // Common section padding
@@ -72,6 +72,48 @@ body {
   max-width: 100%;
   img {
     width: 100%;
+  }
+}
+
+// Primary Button
+.primary-btn {
+  height: 54px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  background-color: $primary;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: $shadow;
+  font-family: $secondaryFont;
+  position: relative;
+  text-decoration: none;
+  gap: 10px;
+  transition: all ease-in-out 0.5s;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include ipad {
+    height: 40px;
+    font-size: 14px;
+    width: 180px;
+  }
+
+  // .indicator-right {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 15%;
+  //   transform: translateY(-40%);
+  // }
+
+  @include ipad {
+    font-size: 16px;
   }
 }
 

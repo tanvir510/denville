@@ -1,200 +1,155 @@
-.banner-container {
-  position: relative;
-  overflow: hidden;
-}
-
 .banner-area {
-  background-image: url(../images/banner/main-banner.png);
+  height: 650px;
+  background-image: url("../images/common/main-banner.png");
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: center center;
   background-size: cover;
-  position: relative;
-
-  .headline-scroll {
-    position: absolute;
-    top: 135px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    color: $white;
-    font-size: 20px;
-    font-weight: 500;
-    @include desktop {
-      top: 115px;
-    }
-    @include laptop {
-      top: 100px;
-      font-size: 18px;
-    }
-    @include tablet {
-      top: 80px;
-      font-size: 16px;
-    }
-    @include mobile-sm {
-      width: 80%;
-      font-size: 14px;
-    }
-  }
-
-  .curp-shape {
-    position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      height: 5px;
-      width: 100%;
-      bottom: -3px;
-      background: $primary;
-      left: 0;
-    }
-  }
-}
-
-.banner-wrapper {
-  padding: 170px 0px 100px;
-
-  @include desktop {
-    background-position: 10% 100%;
-    padding: 150px 0px 100px;
-  }
 
   @include tablet {
-    padding: 110px 0px 60px;
+    height: auto;
+    padding: 40px 0px;
   }
 
-  @include ipad {
-    img {
+  .banner-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  .banner-content {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      max-width: 490px;
+      font-size: 56px;
+      line-height: 65px;
+      color: $white;
+      font-family: $primaryFont;
+      margin-bottom: 30px;
+      width: 100%;
+      @include tablet {
+        max-width: 100%;
+        text-align: center;
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: 20px;
+      }
+
+      @include mobile-sm {
+        font-size: 28px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .banner-form {
+    width: 50%;
+    @include tablet {
       width: 100%;
     }
   }
 
-  .counter-number {
-    position: relative;
-    margin-bottom: 30px;
+  .form-wrapper {
+    background: $white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+  }
 
-    @include mobile-sm {
+  .booking-form {
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: $secondaryFont;
+
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #2d2d83;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: #1e1e5e;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      position: relative;
+      .icon {
+        position: absolute;
+        top: 50%;
+        right: 4%;
+        transform: translateY(-50%);
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+    }
+
+    h2 {
+      color: #2d2d83;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    p {
+      color: #6f6f9a;
+      text-align: center;
       margin-bottom: 20px;
     }
-
-    @include mobile {
-      margin-bottom: 10px;
-    }
-
-    img {
-      opacity: 0.8;
-      animation: jackpot-flash 2s ease infinite;
-    }
-
-    .counter-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      .number {
-        font-size: 40px;
-        font-weight: 600;
-        color: $white;
-        text-shadow: 0 0 6px #ff00e0, 0 0 10px #ff00e0, 0 0 10px #fff;
-        @include mobile-sm {
-          font-size: 24px;
-        }
-      }
-      .text {
-        font-size: 22px;
-        font-weight: 600;
-        color: $white;
-        text-shadow: 0 0 6px dodgerblue, 0 0 10px dodgerblue, 0 0 10px #fff;
-        @include mobile-sm {
-          font-size: 16px;
-        }
-        @include mobile {
-          font-size: 14px;
-        }
-      }
-    }
   }
 
-  .daftar-btn {
-    outline: none;
-    border: none;
-    border-radius: 40px;
-    width: 300px;
-    margin: auto;
-    height: 80px;
-    background: #f7a403;
-    padding: 0px 60px;
-    border-radius: 1vw;
-    font-size: 47px;
-    font-weight: 700;
-    text-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.25);
-    -webkit-box-shadow: 0 0 11px #ffe13e, 0 0 10px #2d2809, 0 0 11px #ffe13e inset;
-    box-shadow: 0 0 11px #ffe13e, 0 0 10px #2d2809, 0 0 11px #ffe13e inset;
-    -webkit-transition: 0.25s ease;
-    color: #fff;
-    position: relative;
-    z-index: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    transition: $transition;
-    cursor: pointer;
-
-    &:hover {
-      background: #fdc04a;
-      -webkit-box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
-      box-shadow: 0 0 21px #ffe13e, 0 0 20px #2d2809, 0 0 21px #ffe13e inset;
-    }
-    @include ipad {
-      width: 50%;
-      padding: 0px 20px;
-      font-size: 25px;
-      border: none;
-      border-radius: 30px;
-      height: 50px;
-    }
-    &:focus {
-      outline: none;
-      border: none;
-      box-shadow: none;
-    }
+  .booking-form .form-group input::placeholder,
+  .booking-form .form-group textarea::placeholder {
+    color: #aaa;
   }
 
-  .note {
-    background: $black;
-    padding: 5px 10px;
-    border-radius: 15px;
-    color: $white;
-    width: 520px;
-    max-width: 100%;
-    font-size: 16px;
-    margin: 0 auto 50px;
-    @include mobile-sm {
-      font-size: 13px;
-    }
-    @include tablet {
-      margin-bottom: 30px;
-    }
-    @include mobile-sm {
-      margin-bottom: 0px;
-    }
+  .booking-form .form-group.input-group {
+    display: flex;
+    align-items: center;
   }
-}
 
-@keyframes jackpot-flash {
-  0% {
-    filter: contrast(1) brightness(1);
-    -webkit-filter: contrast(1) brightness(1);
-    opacity: 0.65;
+  .booking-form .form-group.input-group input {
+    flex: 1;
+    border-radius: 5px 0 0 5px;
+    width: auto !important;
   }
-  50% {
-    filter: contrast(1) brightness(1);
-    -webkit-filter: contrast(1) brightness(1);
-    opacity: 0.9;
-  }
-  100% {
-    filter: contrast(1) brightness(1);
-    -webkit-filter: contrast(1) brightness(1);
-    opacity: 0.65;
+
+  .booking-form .form-group.input-group select {
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    width: auto !important;
   }
 }
