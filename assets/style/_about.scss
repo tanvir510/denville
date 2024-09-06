@@ -5,7 +5,7 @@
     padding: 25px 0px;
   }
   h1 {
-    font-size: 60px;
+    font-size: 70px;
     line-height: 70px;
     color: $secondary;
     font-family: $primaryFont;
@@ -53,9 +53,11 @@
       margin-bottom: 10px;
       display: inline-block;
 
-      label {
+      label > a {
         color: $white;
+        text-decoration: none;
         cursor: pointer;
+        display: block;
         margin-bottom: 10px;
         transition: all ease-in-out 0.5s;
         &:hover {

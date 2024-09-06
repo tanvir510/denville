@@ -1084,7 +1084,7 @@ body.modal-open {
   }
 }
 .about-us h1 {
-  font-size: 60px;
+  font-size: 70px;
   line-height: 70px;
   color: #f26f21;
   font-family: "Oswald", sans-serif;
@@ -1132,13 +1132,15 @@ body.modal-open {
   margin-bottom: 10px;
   display: inline-block;
 }
-.about-form .about-form-inner .radio-action label {
+.about-form .about-form-inner .radio-action label > a {
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
+  display: block;
   margin-bottom: 10px;
   transition: all ease-in-out 0.5s;
 }
-.about-form .about-form-inner .radio-action label:hover {
+.about-form .about-form-inner .radio-action label > a:hover {
   padding-left: 5px;
   color: #f26126;
 }
@@ -1787,6 +1789,15 @@ body.modal-open {
     margin-bottom: 40px;
   }
 }
-.feature-analysis .analysis-thumbnail img {
-  width: 100%;
+.feature-analysis .analysis-thumbnail {
+  height: 435px;
+  background-image: url("../images/common/feature-post-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media only screen and (max-width: 768px) {
+  .feature-analysis .analysis-thumbnail {
+    height: 300px;
+  }
 }/*# sourceMappingURL=app.css.map */

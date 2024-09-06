@@ -128,8 +128,14 @@
   }
 
   .analysis-thumbnail {
-    img {
-      width: 100%;
+    height: 435px;
+    background-image: url("../images/common/feature-post-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include ipad {
+      height: 300px;
     }
   }
 }
