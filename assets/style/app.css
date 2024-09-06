@@ -455,7 +455,9 @@ body {
   border: 1px solid transparent;
 }
 .primary-btn:hover {
-  color: #fff;
+  background-color: #fff;
+  border: 1px solid #f26126;
+  color: #f26126;
 }
 @media only screen and (max-width: 768px) {
   .primary-btn {
@@ -1082,7 +1084,7 @@ body.modal-open {
   }
 }
 .about-us h1 {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 70px;
   color: #f26f21;
   font-family: "Oswald", sans-serif;
