@@ -22,45 +22,63 @@
       line-height: 30px;
     }
   }
+}
 
-  .about-form {
-    .about-form-inner {
-      background-color: #071040;
-      width: 100%;
-      padding: 15px 0px 5px;
-      border-radius: 10px;
-      .thumb {
-        width: 250px;
-        margin: 0 auto;
-        margin-bottom: 15px;
+.about-form {
+  .about-form-inner {
+    background-color: #071040;
+    width: 100%;
+    padding: 15px 0px 5px;
+    border-radius: 10px;
+    .thumb {
+      width: 250px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+
+    .action-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      .primary-btn {
+        height: 42px;
+        width: 170px;
+        font-size: 16px;
       }
+    }
 
-      .radio-action {
-        padding: 0px 20px;
+    .radio-action {
+      padding: 0px 20px;
+      margin-bottom: 10px;
+      display: inline-block;
+
+      label {
+        color: $white;
+        cursor: pointer;
         margin-bottom: 10px;
-        display: inline-block;
-
-        label {
-          color: $white;
-          margin-bottom: 10px;
+        transition: all ease-in-out 0.5s;
+        &:hover {
+          padding-left: 5px;
+          color: $primary;
         }
       }
+    }
 
-      .submit-action {
-        margin-bottom: 20px;
-        h6 {
-          color: $white;
-        }
+    .submit-action {
+      margin-bottom: 20px;
+      h6 {
+        color: $white;
+      }
 
-        select {
-          width: 80%;
-          margin: 0 auto;
-          padding: 6px 10px;
-          border-radius: 20px;
-          border: 1px solid #ddd;
-          font-size: 14px;
-          margin-bottom: 25px;
-        }
+      select {
+        width: 80%;
+        margin: 0 auto;
+        padding: 6px 10px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        margin-bottom: 25px;
       }
     }
   }
