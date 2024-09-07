@@ -1790,11 +1790,12 @@ body.modal-open {
   }
 }
 .feature-analysis .analysis-thumbnail {
-  height: 435px;
-  background-image: url("../images/common/feature-post-banner.png");
+  height: 470px;
+  background-image: url("../images/common/water-damage-banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 768px) {
   .feature-analysis .analysis-thumbnail {
