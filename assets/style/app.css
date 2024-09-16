@@ -1423,6 +1423,9 @@ body.modal-open {
   justify-content: end;
 }
 
+.service-widget {
+  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
+}
 .service-widget .widget-top {
   background-color: #003870;
   width: 100%;
