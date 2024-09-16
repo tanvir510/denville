@@ -1,13 +1,29 @@
 .banner-area {
-  height: 650px;
-  background-image: url("../images/common/main-banner.png");
+  height: auto;
+  background-image: url("../images/banner/main-banner.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  padding: 80px 0px;
 
   @include tablet {
     height: auto;
     padding: 40px 0px;
+  }
+  .primary-btn {
+    @include mobile-sm {
+      padding: 7px 20px;
+      font-size: 14px;
+      img {
+        width: 14px;
+      }
+    }
+    &.call-btn {
+      @include mobile-sm {
+        // width: 100%;
+        margin-bottom: 0px;
+      }
+    }
   }
 
   .banner-wrapper {
@@ -20,7 +36,9 @@
   }
 
   .banner-content {
-    width: 50%;
+    width: 100%;
+    max-width: 720px;
+
     @include tablet {
       width: 100%;
       text-align: center;
@@ -34,7 +52,6 @@
       width: 250px;
     }
     h2 {
-      max-width: 490px;
       font-size: 56px;
       line-height: 65px;
       color: $white;

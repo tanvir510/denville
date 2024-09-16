@@ -1,17 +1,14 @@
 .about-us {
-  padding: 50px 0px;
-
-  @include ipad {
-    padding: 25px 0px;
-  }
   h1 {
-    font-size: 70px;
+    font-size: 64px;
     line-height: 70px;
-    color: $secondary;
-    font-family: $primaryFont;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+
+    @include laptop {
+      font-size: 55px;
+      line-height: 62px;
+    }
     @include tablet {
-      max-width: 100%;
       font-size: 40px;
       line-height: 45px;
       margin-bottom: 20px;
@@ -24,216 +21,140 @@
   }
 }
 
-.about-form {
-  .about-form-inner {
-    background-color: #071040;
-    width: 100%;
-    padding: 15px 0px 5px;
-    border-radius: 10px;
-    .thumb {
-      width: 250px;
-      margin: 0 auto;
-      margin-bottom: 15px;
+.about-list {
+  padding-left: 0;
+  li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: $primary;
+    font-size: 20px;
+    font-weight: 600;
+    @include ipad {
+      font-size: 18px;
     }
-
-    .action-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 15px;
-      .primary-btn {
-        height: 42px;
-        width: 170px;
-        font-size: 16px;
-      }
+    @include mobile-sm {
+      font-size: 15px;
     }
-
-    .radio-action {
-      padding: 0px 20px;
-      margin-bottom: 10px;
-      display: inline-block;
-
-      label > a {
-        color: $white;
-        text-decoration: none;
-        cursor: pointer;
-        display: block;
-        margin-bottom: 10px;
-        transition: all ease-in-out 0.5s;
-        &:hover {
-          padding-left: 5px;
-          color: $primary;
-        }
-      }
-    }
-
-    .submit-action {
-      margin-bottom: 20px;
-      h6 {
-        color: $white;
-      }
-
-      select {
-        width: 80%;
-        margin: 0 auto;
-        padding: 6px 10px;
-        border-radius: 20px;
-        border: 1px solid #ddd;
-        font-size: 14px;
-        margin-bottom: 25px;
-      }
+    img {
+      margin-right: 5px;
     }
   }
 }
 
-.feature {
-  .feature-top-wrapper {
-    height: auto;
-    background-image: url("../images/common/feature-banner.png");
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    background-size: cover;
-    padding: 15px;
-    border-radius: 10px;
+.about-accordion {
+  padding: 20px 20px;
+  border-radius: 5px;
+  background-color: $primary;
+  // box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
 
-    @include tablet {
-      background-position: 15% 0%;
-    }
-
-    p {
-      max-width: 480px;
-    }
-
-    h3 {
-      max-width: 490px;
-      font-size: 40px;
-      line-height: 50px;
-      color: $tertiary;
-      font-family: $primaryFont;
-      margin-bottom: 30px;
-      width: 100%;
-      @include tablet {
-        max-width: 100%;
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 10px;
-      }
-
-      @include mobile-sm {
+  .accordion-item {
+    margin-bottom: 5px;
+    border: none;
+    .accordion-header {
+      background-color: $primary;
+      display: flex;
+      .accordion-button {
+        border-radius: 0px;
+        font-weight: 600;
         font-size: 22px;
-        line-height: 30px;
+        line-height: 38px;
+        color: #94e4c8;
+        font-family: $primaryFont;
+        margin-bottom: 0px;
+        width: 100%;
+        padding: 5px 0px;
+        background-color: $primary;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+          width: 25px;
+        }
+        &.collapsed {
+          background-color: $primary;
+          box-shadow: none;
+        }
+        @include tablet {
+          max-width: 100%;
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        @include mobile-sm {
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
     }
-  }
 
-  .feature-bottom-wrapper {
-    padding: 25px 60px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-
-    @include ipad {
-      padding: 15px 20px;
-    }
-
-    .thumb {
-      height: auto;
-      background-image: url("../images/common/feature-post-banner.png");
-      background-repeat: no-repeat;
-      background-position: 50% 0%;
-      background-size: cover;
-      padding: 25px 0px;
-      margin-bottom: 20px;
+    .accordion-body {
+      background-color: $primary;
+      padding: 0px;
+      @include tablet {
+        padding: 0px 10px;
+      }
 
       ul {
-        padding-left: 50px;
-        margin-bottom: 0px;
         li {
           color: $white;
-          font-size: 15px;
-          margin-bottom: 5px;
-          font-weight: 600;
-          :last-child {
-            margin-bottom: 0px;
+          a {
+            color: $white;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+            text-decoration: none;
           }
         }
-      }
-    }
-
-    h4 {
-      font-size: 28px;
-      line-height: 38px;
-      color: #119ddb;
-      font-family: $primaryFont;
-      margin-bottom: 10px;
-      width: 100%;
-      @include tablet {
-        max-width: 100%;
-        font-size: 22px;
-        line-height: 30px;
-      }
-
-      @include mobile-sm {
-        font-size: 20px;
-        line-height: 26px;
       }
     }
   }
 
-  .feature-support {
-    .row {
-      padding: 40px;
-      @include ipad {
-        padding: 20px 10px;
-      }
+  .accordion-button::after {
+    width: 13px;
+    height: 7px;
+    background-size: 15px;
+    background-image: url("../images/icon/arrow-down.png");
+    transition: all 0.5s;
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("../images/icon/arrow-down.png");
+  }
+}
 
-      .support-item {
-        border: 1px solid #ebebeb;
-        padding: 20px;
-        border-radius: 20px;
-        margin-bottom: 25px;
-        transition: all ease-in-out 0.5s;
-
-        &:hover {
-          background-color: #f8f7f5;
-
-          .content {
-            h6 {
-              color: $primary;
-            }
-          }
-        }
-
-        @include ipad {
-          margin-bottom: 15px;
-        }
-
-        .thumb {
-          width: 50px;
-          margin-top: 5px;
-        }
-
-        .content {
-          min-height: 125px;
-          @include ipad {
-            min-height: auto;
-          }
-          p {
-            margin-bottom: 0px;
-          }
-
-          h6 {
-            font-size: 20px;
-            line-height: 28px;
-            color: #119ddb;
-            font-family: $primaryFont;
-            margin-bottom: 5px;
-            width: 100%;
-            transition: all ease-in-out 0.5s;
-            @include tablet {
-              max-width: 100%;
-              font-size: 18px;
-              line-height: 25px;
-            }
-          }
+.about-widget {
+  border: 1px solid $primary;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
+  @include ipad {
+    padding: 20px 45px;
+  }
+  ul {
+    padding-left: 0;
+    max-width: 75%;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 100%;
+    }
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $tertiary;
+        padding: 5px 0px;
+        display: block;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background-color: $primary;
+          border-radius: 100%;
+          left: -30px;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
     }

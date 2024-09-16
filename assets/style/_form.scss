@@ -1,142 +1,27 @@
-.jot-form-wrapper {
+.jot-form {
   height: auto;
-  background-image: url("../images/common/reason-banner.png");
+  background-image: url("../images/banner/jot-form-banner.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px;
-  margin-bottom: 50px;
-
-  @include ipad {
-    padding: 40px 0px;
-    margin-bottom: 40px;
-  }
-
-  .form-wrapper {
-    background: $white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 400px;
-  }
-
-  .booking-form {
-    width: 100%;
-    max-width: 60%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    font-family: $secondaryFont;
-
-    @include ipad {
-      max-width: 80%;
-    }
-
-    @include mobile-sm {
-      max-width: 92%;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      background-color: #2d2d83;
-      color: #fff;
-      padding: 12px;
-      border-radius: 5px;
-      font-size: 16px;
+  .form-heading {
+    .section-heading {
+      color: $white;
       text-align: center;
-      text-decoration: none;
-      margin-top: 10px;
+      font-size: 32px;
+      line-height: 40px;
+      margin: 0 auto 15px;
 
-      &:hover {
-        background-color: #1e1e5e;
+      @include tablet {
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        margin-bottom: 5px;
       }
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-      position: relative;
-      .icon {
-        position: absolute;
-        top: 50%;
-        right: 4%;
-        transform: translateY(-50%);
-      }
-
-      input,
-      select,
-      textarea {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-        font-size: 14px;
-      }
-    }
-
-    h2 {
-      color: #2d2d83;
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 5px;
-      font-weight: 700;
-    }
-
-    p {
-      color: #6f6f9a;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  }
-
-  .booking-form .form-group input::placeholder,
-  .booking-form .form-group textarea::placeholder {
-    color: #aaa;
-  }
-
-  .booking-form .form-group.input-group {
-    display: flex;
-    align-items: center;
-  }
-
-  .booking-form .form-group.input-group input {
-    flex: 1;
-    border-radius: 5px 0 0 5px;
-    width: auto !important;
-  }
-
-  .booking-form .form-group.input-group select {
-    border-radius: 0 5px 5px 0;
-    border: 0;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #f8f8f8;
-    width: auto !important;
-  }
-}
-
-.feature-analysis {
-  padding-bottom: 50px;
-  margin-bottom: 50px;
-
-  @include ipad {
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-  }
-
-  .analysis-thumbnail {
-    height: 470px;
-    background-image: url("../images/common/water-damage-banner.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    border-radius: 10px;
-
-    @include ipad {
-      height: 300px;
     }
   }
 }

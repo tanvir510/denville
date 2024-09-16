@@ -1,0 +1,29 @@
+.specialist-section {
+  background-image: url("../images/banner/diabetes-specialist-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 50px;
+
+  @include ipad {
+    margin-top: 30px;
+  }
+
+  .specialist-content {
+    .section-heading {
+      max-width: 675px;
+    }
+
+    p {
+      max-width: 750px;
+      width: 100%;
+    }
+    .action-btn {
+      .primary-btn {
+        @include mobile-sm {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

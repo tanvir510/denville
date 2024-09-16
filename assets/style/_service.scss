@@ -114,129 +114,135 @@
   }
 }
 
-.reason {
-  padding-bottom: 40px;
-  @include tablet {
-    padding-bottom: 20px;
-  }
-  .reason-wrapper {
-    height: auto;
-    background-image: url("../images/common/reason-banner.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    border-radius: 20px;
-
-    @include tablet {
-      height: auto;
-      padding: 40px 20px 30px;
-    }
-
-    h2 {
-      max-width: 890px;
-      font-size: 45px;
-      line-height: 55px;
-      color: $white;
-      font-family: $primaryFont;
-      margin-bottom: 20px;
-      text-align: center;
-      width: 100%;
-      @include tablet {
-        max-width: 100%;
-        font-size: 30px;
-        line-height: 30px;
-        margin-bottom: 15px;
-      }
-
-      @include mobile-sm {
-        font-size: 28px;
-        line-height: 35px;
-      }
-    }
-
-    p {
-      color: $white;
-      max-width: 960px;
-      width: 100%;
-      text-align: center;
-
-      @include tablet {
-        text-align: center;
-      }
+.service-area {
+  .service-thumbnail {
+    // background-image: url("../images/service/service-area.png");
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    img {
+      border-radius: 10px;
     }
   }
 
-  .reason-feature {
-    .accordion-item {
+  .disclaimer-content {
+    margin-bottom: 30px;
+    @include ipad {
       margin-bottom: 20px;
-      border: none;
-      @include tablet {
-        margin-bottom: 15px;
-      }
-      .accordion-button {
-        border-radius: 65px;
-        font-size: 24px;
-        line-height: 38px;
-        color: #119ddb;
-        font-family: $primaryFont;
+    }
+    .section-heading {
+      max-width: 100%;
+      width: 100%;
+      font-size: 32px;
+      line-height: 40px;
+      margin: 0 auto 15px;
+      color: $tertiary;
+
+      @include ipad {
+        text-align: start;
+        font-size: 20px;
+        line-height: 26px;
         margin-bottom: 10px;
-        width: 100%;
-        padding: 10px 30px;
-        background-color: #fff;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 11px;
+      }
+      @include mobile-sm {
+        margin-bottom: 5px;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+    .description {
+      color: $black;
+      background-color: #ffe48c;
+      padding: 20px;
+      border-radius: 10px;
+      span {
+        font-weight: 600;
+      }
+      p {
+        margin-bottom: 0;
+        @include ipad {
+          margin-bottom: 10px;
+        }
+      }
+      .icon {
         display: flex;
         align-items: center;
-        gap: 8px;
-        img {
-          width: 25px;
-          // margin-top: 10px;
-        }
-        &.collapsed {
-          background-color: #f2f2f2;
-          box-shadow: none;
-        }
-        @include tablet {
-          max-width: 100%;
-          font-size: 20px;
-          line-height: 30px;
-        }
+        justify-content: end;
+      }
+    }
+  }
+}
 
-        @include mobile-sm {
-          font-size: 18px;
-          line-height: 26px;
-        }
+.service-widget {
+  .widget-top {
+    background-color: $primary;
+    width: 100%;
+    padding: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    h6 {
+      color: $white;
+    }
+
+    .selection {
+      position: relative;
+      select {
+        border-radius: 8px;
+        background-color: #bddaec;
+        border: none;
+        outline: none;
+        padding: 7px 15px;
+        -webkit-appearance: none;
+        appearance: none;
       }
 
-      .accordion-body {
-        @include tablet {
-          padding: 0px 10px;
-        }
-
-        .thumb {
-          img {
-            @include tablet {
-              width: 100%;
-            }
+      .icon {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+    }
+  }
+  .widget-bottom {
+    padding: 15px 20px;
+    border: 1px solid #2685c0;
+    border-radius: 5px;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    .jump-links {
+      padding-left: 0;
+      li {
+        position: relative;
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: $tertiary;
+          display: block;
+          padding: 5px 25px;
+          &::after {
+            position: absolute;
+            content: "";
+            top: 12px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            background-color: #2685c0;
+            border-radius: 100%;
           }
         }
       }
     }
 
-    .accordion-button::after {
-      width: 2rem;
-      height: 2rem;
-      background-size: 30px;
-      background-image: url("../images/icon/plus.png");
-      transition: all 0.5s;
-    }
-    .accordion-button:not(.collapsed)::after {
-      background-image: url("../images/icon/minus.png");
+    .action-btn {
+      .primary-btn {
+        padding: 6px 25px;
+        font-size: 14px;
+        border-radius: 7px;
+      }
     }
   }
 }

@@ -1,0 +1,44 @@
+.contact-us {
+  .contact-information {
+    padding: 30px 20px;
+    background-color: $primary;
+    border-radius: 10px;
+    @include ipad {
+      margin-top: 20px;
+    }
+    .section-heading {
+      max-width: 100%;
+      width: 100%;
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0 auto 5px;
+      color: $white;
+
+      @include ipad {
+        text-align: start;
+        font-size: 18px;
+        line-height: 25px;
+      }
+      @include mobile-sm {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    p {
+      color: $white;
+    }
+
+    ul {
+      margin-bottom: 25px;
+      display: block;
+      li {
+        color: $white;
+        margin-bottom: 5px;
+      }
+    }
+
+    .action-btn {
+      display: flex;
+    }
+  }
+}

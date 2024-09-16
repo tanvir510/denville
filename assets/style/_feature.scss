@@ -1,0 +1,110 @@
+.feature-section {
+  .feature-wrapper {
+    height: auto;
+    background-image: url("../images/banner/innovative-diabetes-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .feature-content {
+      max-width: 865px;
+      width: 100%;
+      ul {
+        max-width: 510px;
+        width: 100%;
+        li {
+          a {
+            color: $primary;
+            text-decoration: none;
+            padding: 6px 0px;
+            font-weight: 500;
+            display: block;
+          }
+        }
+      }
+      .small-heading {
+        color: $tertiary;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 5px;
+        display: block;
+      }
+    }
+    p {
+      color: $tertiary;
+    }
+  }
+  .service-feature {
+    padding: 0px 40px 0px;
+    transform: translateY(-90px);
+
+    @include tablet {
+      padding: 30px 5px;
+      transform: translateY(0px);
+    }
+    .col-lg-12 {
+      &:last-child {
+        .service-item {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .service-item {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 11px;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 25px;
+      min-height: 96%;
+      transition: all ease-in-out 0.5s;
+      background-color: $white;
+      &:hover {
+        background-color: #f8f7f5;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 20px;
+
+        .content {
+          h5 {
+            color: $secondary;
+          }
+        }
+      }
+      .thumb {
+        // width: 40px;
+        // height: 40px;
+        margin-bottom: 10px;
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        padding: 0px 5px 5px;
+        @include ipad {
+          padding: 0px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        h5 {
+          font-size: 18px;
+          line-height: 26px;
+          margin: 10px 0px 8px;
+          color: $primary;
+          font-family: $primaryFont;
+          width: 100%;
+          transition: all ease-in-out 0.5s;
+          @include tablet {
+            max-width: 100%;
+            margin: 5px 0px;
+            font-size: 20px;
+            line-height: 26px;
+          }
+
+          @include mobile-sm {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}

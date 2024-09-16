@@ -1,0 +1,118 @@
+.process-section {
+  .process-wrapper {
+    height: auto;
+    background-image: url("../images/banner/comprehensive-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .process-content {
+      max-width: 840px;
+      width: 100%;
+      .section-heading {
+        max-width: 840px;
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      color: $tertiary;
+    }
+  }
+  .service-process {
+    padding: 0px 40px 0px;
+    transform: translateY(-100px);
+
+    @include tablet {
+      padding: 30px 5px;
+      transform: translateY(0px);
+    }
+    .col-lg-12 {
+      &:last-child {
+        .service-item {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .service-item {
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: all ease-in-out 0.5s;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+
+      @include mobile-lg {
+        flex-direction: column;
+        gap: 0;
+      }
+      &:hover {
+        background-color: #f8f7f5;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 20px;
+      }
+      .thumb {
+        width: 180px;
+        display: flex;
+        @include mobile-lg {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        padding: 15px 20px;
+        width: calc(100% - 180px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mobile-lg {
+          width: 100%;
+        }
+        &.one {
+          background-color: #dfefd9;
+        }
+        &.two {
+          background-color: #ffe2e2;
+        }
+        &.three {
+          background-color: #ffe0a4;
+        }
+        &.four {
+          background-color: #efe8f6;
+        }
+        &.five {
+          background-color: #a9c47f;
+        }
+        &.six {
+          background-color: #a2cdff;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        h5 {
+          font-size: 18px;
+          margin: 10px 0px 8px;
+          color: $primary;
+          font-family: $primaryFont;
+          width: 100%;
+          transition: all ease-in-out 0.5s;
+          margin-top: 0;
+          line-height: 20px;
+          @include tablet {
+            max-width: 100%;
+            margin: 5px 0px;
+            font-size: 20px;
+            line-height: 26px;
+          }
+
+          @include mobile-sm {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}

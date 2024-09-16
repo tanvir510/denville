@@ -1,0 +1,129 @@
+.top-way-section {
+  .top-way-wrapper {
+    height: auto;
+    background-image: url("../images/banner/top-way-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &.section-padding {
+      padding: 40px 0px;
+      @include ipad {
+        padding: 20px 0px;
+      }
+    }
+    .top-way-content {
+      max-width: 700px;
+      width: 100%;
+      padding: 50px 0px;
+
+      @include ipad {
+        padding: 15px 0px;
+      }
+      .section-heading {
+        max-width: 700px;
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      color: $tertiary;
+    }
+  }
+  .service-top-way {
+    padding: 0px 40px 0px;
+    transform: translateY(-75px);
+
+    @include tablet {
+      padding: 30px 5px;
+      transform: translateY(0px);
+    }
+    .col-lg-12 {
+      &:last-child {
+        .service-item {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .service-item {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 11px;
+      background-color: hsl(210, 53%, 94%);
+      border-radius: 18px;
+      padding: 30px;
+      transition: all ease-in-out 0.5s;
+      @include ipad {
+        padding: 20px;
+      }
+
+      @include mobile-sm {
+        padding: 15px 5px;
+      }
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 20px;
+      }
+      .thumb {
+        img {
+          border-radius: 5px;
+          width: 100%;
+        }
+      }
+
+      .content {
+        height: 100%;
+        transition: all ease-in-out 0.5s;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        p {
+          margin-bottom: 0;
+          transition: all ease-in-out 0.5s;
+        }
+        h5 {
+          font-size: 18px;
+          line-height: 26px;
+          margin: 10px 0px 8px;
+          color: $primary;
+          font-family: $primaryFont;
+          width: 100%;
+          transition: all ease-in-out 0.5s;
+          @include tablet {
+            max-width: 100%;
+            margin: 5px 0px;
+            font-size: 20px;
+            line-height: 26px;
+          }
+
+          @include mobile-sm {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+
+        .icon-list {
+          padding-left: 0;
+          li {
+            list-style: none;
+            margin-bottom: 8px;
+            color: $primary;
+            font-size: 20px;
+            font-weight: 600;
+            @include ipad {
+              font-size: 18px;
+            }
+            @include mobile-sm {
+              font-size: 15px;
+            }
+            img {
+              margin-right: 5px;
+            }
+          }
+        }
+        .small-heading {
+          color: #011e45;
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 5px;
+          display: block;
+        }
+      }
+    }
+  }
+}
