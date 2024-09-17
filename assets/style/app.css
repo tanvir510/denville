@@ -1244,13 +1244,12 @@ body.modal-open {
 }
 .about-widget ul li a::after {
   position: absolute;
-  content: "";
+  content: url("../images/icon/round-tick.png");
   width: 10px;
   height: 10px;
-  background-color: #003870;
   border-radius: 100%;
-  left: -30px;
-  top: 50%;
+  left: -32px;
+  top: 28%;
   transform: translateY(-50%);
 }
 
@@ -1425,6 +1424,9 @@ body.modal-open {
 
 .service-widget {
   box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid #2685c0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .service-widget .widget-top {
   background-color: #003870;
@@ -1458,7 +1460,6 @@ body.modal-open {
 }
 .service-widget .widget-bottom {
   padding: 15px 20px;
-  border: 1px solid #2685c0;
   border-radius: 5px;
   border-top: none;
   border-top-left-radius: 0px;

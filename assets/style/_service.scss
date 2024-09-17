@@ -175,6 +175,9 @@
 
 .service-widget {
   box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid #2685c0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   .widget-top {
     background-color: $primary;
     width: 100%;
@@ -209,7 +212,6 @@
   }
   .widget-bottom {
     padding: 15px 20px;
-    border: 1px solid #2685c0;
     border-radius: 5px;
     border-top: none;
     border-top-left-radius: 0px;
