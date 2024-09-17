@@ -1184,6 +1184,7 @@ body.modal-open {
 .about-accordion .accordion-item .accordion-body {
   background-color: #003870;
   padding: 0px;
+  padding-bottom: 5px;
 }
 @media only screen and (max-width: 991px) {
   .about-accordion .accordion-item .accordion-body {

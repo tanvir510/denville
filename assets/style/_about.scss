@@ -91,6 +91,7 @@
     .accordion-body {
       background-color: $primary;
       padding: 0px;
+      padding-bottom: 5px;
       @include tablet {
         padding: 0px 10px;
       }
