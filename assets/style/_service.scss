@@ -114,17 +114,7 @@
   }
 }
 
-.service-area {
-  .service-thumbnail {
-    // background-image: url("../images/service/service-area.png");
-    // background-repeat: no-repeat;
-    // background-position: center center;
-    // background-size: cover;
-    img {
-      border-radius: 10px;
-    }
-  }
-
+.lm-sec-thirteen {
   .disclaimer-content {
     margin-bottom: 30px;
     @include ipad {
@@ -216,7 +206,7 @@
     border-top: none;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    .jump-links {
+    .redirect-links {
       padding-left: 0;
       li {
         position: relative;

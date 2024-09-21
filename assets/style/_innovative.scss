@@ -1,25 +1,30 @@
-.speak-section {
+.lm-sec-four {
   background-color: #e8f0f8;
-  .speak-wrapper {
+  .innovative-wrapper {
     height: auto;
-    background-image: url("../images/banner/speak-diabetes-banner.png");
+    background-image: url("../images/banner/innovative-meditation-banner.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 90% 100%;
     background-size: cover;
-    &.section-padding {
+    &.lm-sec-padding {
       padding: 40px 0px;
     }
-    .speak-content {
-      max-width: 715px;
+    .innovative-content {
+      max-width: 750px;
       width: 100%;
       padding: 50px 0px;
+      margin: 0 auto;
 
       @include ipad {
         padding: 15px 0px;
       }
       .section-heading {
-        max-width: 715px;
+        max-width: 650px;
         margin-bottom: 15px;
+        text-align: center;
+      }
+      p {
+        text-align: center;
       }
       ul {
         max-width: 510px;
@@ -46,7 +51,7 @@
       color: $tertiary;
     }
   }
-  .service-speak {
+  .service-innovative {
     padding: 0px 40px 0px;
     transform: translateY(-75px);
 
@@ -63,64 +68,82 @@
     }
 
     .service-item {
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 11px;
+      box-shadow: $shadow;
       border-radius: 18px;
       margin-bottom: 25px;
       transition: all ease-in-out 0.5s;
+      position: relative;
+      overflow: hidden;
       &:hover {
         background-color: #f8f7f5;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 20px;
 
         .content {
-          background-color: $primary;
-          h5,
+          top: 53%;
+          height: 88%;
           p {
-            color: $white;
+            display: block;
+          }
+          .icon {
+            background-color: #00ade3;
           }
         }
       }
       .thumb {
+        height: 480px;
         img {
-          border-top-left-radius: 18px;
-          border-top-right-radius: 18px;
+          border-radius: 18px;
+          border-radius: 18px;
           width: 100%;
+          height: 100%;
         }
       }
 
       .content {
-        padding: 2px 20px 10px;
-        min-height: 270px;
-        height: 100%;
+        padding: 40px 15px 40px;
         transition: all ease-in-out 0.5s;
-        border-bottom-left-radius: 18px;
-        border-bottom-right-radius: 18px;
-        @include ipad {
-          padding: 15px 15px;
-          min-height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 22%;
+        top: 86%;
+        background-color: rgba($color: $white, $alpha: 0.8);
+        border-radius: 10px;
+        text-align: center;
+        transition: all ease-in-out 0.75s;
+
+        .icon {
+          position: absolute;
+          top: -32px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 65px;
+          height: 65px;
+          line-height: 65px;
+          background: white;
+          border-radius: 100%;
+          background-color: $primary;
+          img {
+            width: 40px;
+          }
         }
         p {
           margin-bottom: 0;
           transition: all ease-in-out 0.5s;
+          line-height: 24px;
+          font-size: 14px;
+          display: none;
+          color: $primary;
         }
         h5 {
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 15px;
+          line-height: 20px;
           margin: 10px 0px 8px;
           color: $primary;
           font-family: $primaryFont;
           width: 100%;
           transition: all ease-in-out 0.5s;
-          @include tablet {
-            max-width: 100%;
-            margin: 5px 0px;
-            font-size: 20px;
-            line-height: 26px;
-          }
-
-          @include mobile-sm {
-            font-size: 18px;
-            line-height: 26px;
-          }
         }
       }
     }

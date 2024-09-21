@@ -1,52 +1,31 @@
-.lm-sec-five {
-  .feature-wrapper {
+.lm-sec-eight {
+  .effect-wrapper {
     height: auto;
-    background-image: url("../images/banner/feature-banner.png");
+    background-image: url("../images/banner/obset-banner.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 100% 100%;
     background-size: cover;
-    height: 315px;
-    p {
-      color: $tertiary;
-    }
-  }
-
-  .feature-content {
-    width: 100%;
-    padding: 40px;
-    margin-bottom: 60px;
-    margin: 0 auto;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    background-color: #f0f8ff;
-
-    @include tablet {
-      margin-bottom: 0px;
-      padding: 20px;
-    }
-    .section-heading {
-      max-width: 100%;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-      max-width: 1040px;
-      margin: 0 auto;
-      @include tablet {
-        max-width: 100%;
+    .effect-content {
+      max-width: 750px;
+      width: 100%;
+      p {
+        margin-bottom: 90px;
+        @include ipad {
+          margin-bottom: 0px;
+        }
+      }
+      .section-heading {
+        max-width: 600px;
+        margin-bottom: 15px;
       }
     }
-    .small-heading {
+    p {
       color: $tertiary;
-      font-weight: 600;
-      font-size: 18px;
-      margin-bottom: 5px;
-      display: block;
     }
   }
-  .service-feature {
+  .service-effect {
     padding: 0px 40px 0px;
-    transform: translateY(-90px);
+    transform: translateY(-80px);
 
     @include tablet {
       padding: 30px 5px;
@@ -109,6 +88,15 @@
           }
         }
       }
+    }
+  }
+
+  .card-item {
+    margin-bottom: 20px;
+    height: 90%;
+    @include ipad {
+      margin-bottom: 40px;
+      height: auto;
     }
   }
 }

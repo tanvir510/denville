@@ -1,18 +1,18 @@
-.top-way-section {
-  .top-way-wrapper {
+.lm-sec-ten {
+  .tips-wrapper {
     height: auto;
-    background-image: url("../images/banner/top-way-banner.png");
+    background-image: url("../images/banner/tips-banner.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 0% 100%;
     background-size: cover;
-    &.section-padding {
+    &.lm-sec-padding {
       padding: 40px 0px;
       @include ipad {
         padding: 20px 0px;
       }
     }
-    .top-way-content {
-      max-width: 700px;
+    .tips-content {
+      max-width: 750px;
       width: 100%;
       padding: 50px 0px;
 
@@ -28,14 +28,78 @@
       color: $tertiary;
     }
   }
-  .service-top-way {
+  .service-tips {
     padding: 0px 40px 0px;
-    transform: translateY(-75px);
+    transform: translateY(-90px);
 
     @include tablet {
       padding: 30px 5px;
       transform: translateY(0px);
     }
+
+    ul {
+      padding: 0;
+      margin-bottom: 30px;
+      @include tablet {
+        margin-bottom: 15px;
+        padding: 0px 15px;
+      }
+      li {
+        @include tablet {
+          margin-bottom: 15px;
+        }
+        list-style: none;
+        margin-right: 15px;
+        box-shadow: $shadow;
+        &:last-child {
+          margin-right: 0px;
+        }
+        button {
+          box-shadow: none !important;
+          outline: none !important;
+          text-align: start;
+          border: none;
+          background-color: $white;
+          color: $primary;
+          transition: all ease-in-out 0.6s;
+          padding: 15px 25px;
+          font-weight: 600;
+          border-radius: 5px;
+          box-shadow: $shadow;
+          @include tablet {
+            box-shadow: none;
+            padding: 12px 20px;
+            font-size: 14px;
+          }
+          &.active {
+            background-color: $primary;
+            color: $white;
+          }
+
+          &:hover {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        padding: 25px 15px;
+
+        @include tablet {
+          padding: 0px;
+        }
+
+        img {
+          @include tablet {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+
     .col-lg-12 {
       &:last-child {
         .service-item {
@@ -122,6 +186,48 @@
           font-size: 18px;
           margin-bottom: 5px;
           display: block;
+        }
+      }
+    }
+  }
+}
+
+.happier-content {
+  box-shadow: $shadow;
+  transform: translateY(-50px);
+
+  @include tablet {
+    transform: translateY(0px);
+  }
+  .content {
+    padding: 50px;
+
+    @include ipad {
+      padding: 30px;
+    }
+    @include mobile-sm {
+      padding: 10px;
+    }
+
+    .primary-btn {
+      @include mobile-sm {
+        padding: 7px 20px;
+        font-size: 14px;
+        img {
+          width: 14px;
+        }
+      }
+      &.call-btn {
+        background-color: transparent;
+        border: 1px solid #ffaf03;
+        border-radius: 2px;
+        color: #292929;
+      }
+      &.request-btn {
+        border-radius: 2px;
+        background-color: #ffaf03;
+        @include mobile-sm {
+          margin-bottom: 0px;
         }
       }
     }

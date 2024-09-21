@@ -1,8 +1,9 @@
-.about-us {
+.lm-sec-two {
   h1 {
     font-size: 64px;
     line-height: 70px;
     margin-bottom: 15px;
+    max-width: 600px;
 
     @include laptop {
       font-size: 55px;
@@ -17,6 +18,14 @@
     @include mobile-sm {
       font-size: 28px;
       line-height: 30px;
+    }
+  }
+
+  p {
+    max-width: 700px;
+    width: 100%;
+    @include ipad {
+      max-width: 100%;
     }
   }
 }
@@ -41,99 +50,23 @@
   }
 }
 
-.about-accordion {
-  padding: 20px 20px;
-  border-radius: 5px;
-  background-color: $primary;
-  // box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
-
-  .accordion-item {
-    margin-bottom: 5px;
-    border: none;
-    .accordion-header {
-      background-color: $primary;
-      display: flex;
-      .accordion-button {
-        border-radius: 0px;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 38px;
-        color: #94e4c8;
-        font-family: $primaryFont;
-        margin-bottom: 0px;
-        width: 100%;
-        padding: 5px 0px;
-        background-color: $primary;
-        box-shadow: none;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        img {
-          width: 25px;
-        }
-        &.collapsed {
-          background-color: $primary;
-          box-shadow: none;
-        }
-        @include tablet {
-          max-width: 100%;
-          font-size: 20px;
-          line-height: 30px;
-        }
-
-        @include mobile-sm {
-          font-size: 18px;
-          line-height: 26px;
-        }
-      }
-    }
-
-    .accordion-body {
-      background-color: $primary;
-      padding: 0px;
-      padding-bottom: 5px;
-      @include tablet {
-        padding: 0px 10px;
-      }
-
-      ul {
-        li {
-          color: $white;
-          a {
-            color: $white;
-            font-size: 14px;
-            margin-bottom: 5px;
-            display: block;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-
-  .accordion-button::after {
-    width: 13px;
-    height: 7px;
-    background-size: 15px;
-    background-image: url("../images/icon/arrow-down.png");
-    transition: all 0.5s;
-  }
-  .accordion-button:not(.collapsed)::after {
-    background-image: url("../images/icon/arrow-down.png");
-  }
-}
-
 .about-widget {
   border: 1px solid $primary;
-  padding: 20px 20px;
   border-radius: 5px;
   box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.12);
-  @include ipad {
-    padding: 20px 45px;
+  .thumb {
+    padding: 20px 20px;
+    background-color: #333;
+  }
+  .about-widget-inner {
+    padding: 20px 20px;
+    @include ipad {
+      padding: 20px 45px;
+    }
   }
   ul {
     padding-left: 0;
-    max-width: 75%;
+    max-width: 90%;
     margin: 0 auto;
     @include tablet {
       max-width: 100%;
@@ -148,13 +81,13 @@
         position: relative;
         &::after {
           position: absolute;
-          content: url("../images/icon/round-tick.png");
+          content: url("../images/icon/right-arrow.png");
           width: 10px;
           height: 10px;
           // background-color: $primary;
           // background-image: url("../images/icon/round-tick.png");
           border-radius: 100%;
-          left: -32px;
+          left: -20px;
           top: 28%;
           transform: translateY(-50%);
         }

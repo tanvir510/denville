@@ -1,0 +1,42 @@
+.lm-sec-three {
+  height: auto;
+  background-image: url("../images/banner/premier-banner.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  .premier-content {
+    h3,
+    p {
+      color: $white;
+    }
+  }
+
+  .premier-list {
+    padding: 40px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $secondary;
+    @include ipad {
+      padding: 15px 20px;
+    }
+    .list-item {
+      list-style: none;
+      color: $white;
+      padding: 10px 0px;
+      width: 50%;
+      position: relative;
+      display: flex;
+      align-items: start;
+      gap: 5px;
+      @include ipad {
+        width: 100%;
+        padding: 6px 0px;
+      }
+      img {
+        width: 18px;
+      }
+    }
+  }
+}

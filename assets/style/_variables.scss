@@ -1,7 +1,7 @@
 //== Color Variables
-$primary: #003870;
-$secondary: #07dc18;
-$tertiary: #23242a;
+$primary: #0b3848;
+$secondary: #169dd6;
+$tertiary: #222222;
 $black: #000;
 $blackLite: #2d2d2d;
 $white: #fff;
@@ -9,12 +9,12 @@ $green: #aaa75d;
 $gray: #4d4048;
 $lite: #f4f4f4;
 $border: #b5b5b5;
-$shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+$shadow: rgba(0, 0, 0, 0.12) 0px 15px 15px;
 $transition: all 0.6s ease-in-out;
 
 //== Typography
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
 
 //== Font Family
 $primaryFont: "Montserrat", sans-serif;
-$secondaryFont: "Open Sans", sans-serif;
+$secondaryFont: "Source Serif 4", sans-serif;

@@ -13,4 +13,6 @@
    * Wow Js
    *****************************/
   new WOW().init();
+
+  // When a button is clicked, show the corresponding content and hide others
 })(jQuery);

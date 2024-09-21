@@ -8,8 +8,8 @@ body {
 }
 
 // Common section padding
-.section-padding {
-  padding: 60px 0px;
+.lm-sec-padding {
+  padding: 50px 0px;
   @include ipad {
     padding: 40px 0px;
   }
@@ -290,15 +290,44 @@ button {
   max-width: 656px;
   width: 100%;
   text-align: start;
+
+  &.three {
+    font-size: 32px;
+    line-height: 40px;
+    @include tablet {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+
+    @include mobile-sm {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &.four {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    @include tablet {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include mobile-sm {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
   @include tablet {
-    text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 30px;
     margin-bottom: 15px;
   }
 
   @include mobile-sm {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 30px;
   }
 }
@@ -321,7 +350,7 @@ button {
   position: relative;
   margin: 0px;
 
-  &.section-padding {
+  &.lm-sec-padding {
     padding: 160px 0px 100px;
     @include laptop {
       padding: 120px 0px 100px;
@@ -514,4 +543,46 @@ body.modal-open {
 #chat-widget-container {
   z-index: 0;
   position: relative;
+}
+
+.card-item {
+  padding: 50px 25px 30px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 18px 0px;
+  position: relative;
+  background-color: $white;
+  height: 100%;
+  &.dark-blue {
+    border-top: 5px solid #354a9d;
+  }
+  &.lite-blue {
+    border-top: 5px solid #169dd6;
+  }
+  &.lite-green {
+    border-top: 5px solid #a9c47f;
+  }
+  &.dark-green {
+    border-top: 5px solid #00856f;
+  }
+  @include ipad {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  .thumb {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }

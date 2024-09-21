@@ -1,0 +1,51 @@
+.lm-sec-nine {
+  &.lm-sec-padding {
+    @include ipad {
+      padding-top: 0px;
+    }
+  }
+  .work-wrapper {
+    background-image: url("../images/banner/work-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    @include tablet {
+      background-image: none;
+      height: 0px;
+    }
+  }
+
+  .work-wrapper-inner {
+    height: auto;
+    background-image: url("../images/banner/work-inner-banner.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    transform: translateY(-100px);
+    border-radius: 20px;
+
+    @include tablet {
+      padding: 20px 15px;
+      transform: translateY(0px);
+    }
+    .content {
+      .section-heading,
+      p {
+        color: $white;
+      }
+    }
+
+    .list {
+      padding: 30px;
+      padding-left: 50px;
+      background-color: $white;
+      border-radius: 10px;
+      border-top: 8px solid #26d9d8;
+      li {
+        padding: 5px 0px;
+      }
+    }
+  }
+}
